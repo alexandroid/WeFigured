@@ -1,0 +1,3216 @@
+
+body {
+  font: 100%/1.1em Arial, Helvetica, sans-serif, sans-serif;
+  color: #6f7a82;
+  background: #fcfdfe url(../../img/store/background_body_clouds.jpg) repeat-x center top;
+  background-attachment: fixed;
+}
+
+p {
+  margin-top: 1.4em;
+  font-size: 0.8em;
+  line-height: 1.3em;
+}
+
+h1 {
+  padding: 0 120px 0 0;
+  font-size: 1.3em;
+  line-height: 1em;
+  color: #216167;
+}
+
+h2 {
+  font-size: 1.3em;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 0.7em;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+ul.floatLeft li {
+  float: left;
+}
+
+ul.floatLeft li.end {
+  margin: 0 0 0;
+}
+
+a {
+  color: #0090ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6cae32;
+}
+
+
+.lead {
+  margin-top: 0;
+}
+
+div.col {
+  float: left;
+}
+
+div.col div.top,
+div.col div.bottom {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+div.col div.top {
+  height: 9px;
+}
+
+div.col div.bottom {
+  height: 11px;
+}
+
+div.col div.colWrap {
+  margin: 0 40px;
+  padding: 30px 0;
+  position: relative;
+}
+
+div#scCol div.colWrap {
+  min-height: 0 !important;
+}
+
+/*-----------------------------------------
+  FORM DEFAULTS
+-------------------------------------------*/
+
+form fieldset legend {
+  display: none;
+}
+
+div.textfield input,
+select.select,
+textarea.textarea {
+  color: #6f7a82;
+}
+
+/*-----------------------------------------
+  NAV LINKS
+-------------------------------------------*/
+
+#topNavContainer {
+  background: url(../../img/store/background_topNav_left.gif) no-repeat left top;
+  position: absolute;
+  right: 10px;
+  top: 70px;
+  padding: 0 0 0 4px;
+}
+
+#topNavContainer span {
+  display: block;
+  padding: 0 4px 0 0;
+  background: url(../../img/store/background_topNav_right.gif) no-repeat right top;
+}
+
+ul#topNav {
+  height: 36px;
+  background-color: #E0F2FF;
+  padding: 0 6px;
+}
+
+ul#topNav li {
+  margin: 0.68em 0 0 14px;
+  float: left;
+  font-size: 0.8em;
+}
+
+ul#topNav li.first {
+  margin-left: 0;
+}
+
+/*-----------------------------------------
+  HOME PAGE SEARCH
+-------------------------------------------*/
+
+div#homeTopBoxes {
+  position: relative;
+}
+
+div#homeTopBoxes div.topBox {
+  position: absolute;
+  top: 0;
+}
+
+div#tbLeft {
+  left: 0;
+}
+
+div#tbRight {
+  right: 0;
+}
+
+div#homeTopBoxes div.topBox div.left,
+div#homeTopBoxes div.topBox div.middle,
+div#homeTopBoxes div.topBox div.right {
+  float: left;
+}
+
+div#homeTopBoxes div.topBox div.left,
+div#homeTopBoxes div.topBox div.right {
+  width: 10px;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+div#homeTopBoxes div.topBox div.middle {
+  background-repeat: repeat-x;
+  background-position: top;
+  position: relative;
+}
+
+div#homeTopBoxes,
+div#homeTopBoxes div.topBox,
+div#homeTopBoxes div.topBox div.left,
+div#homeTopBoxes div.topBox div.right,
+div#homeTopBoxes div.topBox div.middle {
+  height: 168px;
+}
+
+div#tbLeft {
+  width: 584px;
+}
+
+div#tbLeft div.left {
+  background-image: url(../../img/store/background_homeTl_left.gif);
+}
+
+div#tbLeft div.middle {
+  width: 564px;
+  background-image: url(../../img/store/background_homeTl_middle.gif);
+}
+
+div#tbLeft div.right {
+  background-image: url(../../img/store/background_homeTl_right.gif);
+}
+
+div#tbRight {
+  width: 224px;
+}
+
+div#tbRight div.left {
+  background-image: url(../../img/store/background_homeTr_left.gif);
+}
+
+div#tbRight div.middle {
+  width: 204px;
+  background-image: url(../../img/store/background_homeTr_middle.gif);
+}
+
+div#tbRight div.right {
+  background-image: url(../../img/store/background_homeTr_right.gif);
+}
+
+div#searchContainer,
+div#searchPersonal {
+  width: 564px;
+  height: 168px;
+}
+
+body.home div#searchContainer,
+body.home div#searchPersonal,
+body.pricing div#searchContainer,
+body.pricing div#searchPersonal,
+body.upgrade div#searchContainer,
+body.upgrade div#searchPersonal,
+body.aboutus div#searchContainer,
+body.aboutus div#searchPersonal,
+body.services div#searchContainer,
+body.services div#searchPersonal,
+body.about div#searchContainer,
+body.about div#searchPersonal {
+  position: absolute;
+  top: 0;
+}
+
+body.home div#searchContainer,
+body.pricing div#searchContainer,
+body.upgrade div#searchContainer,
+body.aboutus div#searchContainer,
+body.services div#searchContainer,
+body.about div#searchContainer {
+  left: 0;
+}
+
+body.home div#searchContainer img.heading,
+body.pricing div#searchContainer img.heading,
+body.upgrade div#searchContainer img.heading,
+body.aboutus div#searchContainer img.heading,
+body.services div#searchContainer img.heading,
+body.about div#searchContainer img.heading {
+  position: absolute;
+  left: 32px;
+  top: 42px;
+}
+
+body.home div#searchContainer #transfer,
+body.pricing div#searchContainer #transfer,
+body.upgrade div#searchContainer #transfer,
+body.aboutus div#searchContainer #transfer,
+body.services div#searchContainer #transfer,
+body.about div#searchContainer #transfer {
+  position: absolute;
+  right: 23px;
+  top: 46px;
+}
+
+body.home div#searchContainer #transfer a,
+body.pricing div#searchContainer #transfer a,
+body.upgrade div#searchContainer #transfer a,
+body.aboutus div#searchContainer #transfer a,
+body.service div#searchContainer #transfer a,
+body.about div#searchContainer #transfer a {
+  font-size: 0.8em;
+  background: url(../../img/store/background_viewMore_arrow.gif) no-repeat right 2px;
+  padding: 0 25px 0.4em 0;
+}
+
+body.home div#searchContainer #transfer a:hover,
+body.pricing div#searchContainer #transfer a:hover,
+body.upgrade div#searchContainer #transfer a:hover,
+body.aboutus div#searchContainer #transfer a:hover,
+body.services div#searchContainer #transfer a:hover,
+body.about div#searchContainer #transfer a:hover {
+  background-image: url(../../img/store/background_viewMore_arrow_over.gif);
+}
+
+body.home div#searchPersonal,
+body.pricing div#searchPersonal,
+body.upgrade div#searchPersonal,
+body.aboutus div#searchPersonal,
+body.services div#searchPersonal,
+body.about div#searchPersonal {
+  left: -10000px;
+}
+
+body.home div#searchPersonal img.heading,
+body.pricing div#searchPersonal img.heading,
+body.upgrade div#searchPersonal img.heading,
+body.aboutus div#searchPersonal img.heading,
+body.services div#searchPersonal img.heading,
+body.about div#searchPersonal img.heading {
+  position: absolute;
+  left: 32px;
+  top: 42px;
+}
+
+div#searchContainer div.dinMedHead,
+div#searchContainer div.dinDlHead,
+div#searchPersonal div.dinDlHead {
+  position: absolute;
+  top: 35px;
+}
+
+div#searchContainer div.dinDlHead,
+div#searchPersonal div.dinDlHead {
+  left: 30px;
+}
+
+div#searchContainer div.dinMedHead {
+  left: 175px;
+}
+
+div#searchContainer form.topNav,
+div#searchPersonal form.topNav {
+  position: absolute;
+  left: 30px;
+  top: 86px;
+}
+
+div#searchContainer a.viewMore {
+  position: absolute;
+  left: 396px;
+  top: 46px;
+}
+
+div#onlyEmail {
+  width: 154px;
+  height: 128px;
+  padding: 40px 25px 0;
+  background: url(../../img/store/background_homeTr_envelope.gif) no-repeat center top;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+div#onlyEmail div.sIFR-replaced {
+  margin-bottom: 0.5em;
+}
+
+div#needMore {
+  width: 150px;
+  height: 133px;
+  padding: 35px 25px 0;
+  position: absolute;
+  left: -10000px;
+  top: 0;
+}
+
+div#needMore div.sIFR-replaced {
+  margin-bottom: 0.5em;
+}
+
+body.home div#searchContainer div.sIFR-replaced,
+body.home div#searchPersonal div.sIFR-replaced,
+body.home div#needMore div.sIFR-replaced,
+body.pricing div#searchContainer div.sIFR-replaced,
+body.pricing div#searchPersonal div.sIFR-replaced,
+body.pricing div#needMore div.sIFR-replaced,
+body.upgrade div#searchContainer div.sIFR-replaced,
+body.upgrade div#searchPersonal div.sIFR-replaced,
+body.upgrade div#needMore div.sIFR-replaced,
+body.aboutus div#searchContainer div.sIFR-replaced,
+body.aboutus div#searchPersonal div.sIFR-replaced,
+body.aboutus div#needMore div.sIFR-replaced,
+body.services div#searchContainer div.sIFR-replaced,
+body.services div#searchPersonal div.sIFR-replaced,
+body.services div#needMore div.sIFR-replaced,
+body.about div#searchContainer div.sIFR-replaced,
+body.about div#searchPersonal div.sIFR-replaced,
+body.about div#needMore div.sIFR-replaced {
+  background-color: #fff;
+}
+
+/*-----------------------------------------
+  HOME PAGE CONTENT
+-------------------------------------------*/
+
+body.home a.viewMore,
+body.pricing a.viewMore,
+body.upgrade a.viewMore,
+body.aboutus a.viewMore,
+body.about a.viewMore {
+  padding: 0 25px 0.4em 0;
+  font-size: 0.8em;
+  background-position: right 2px;
+}
+
+body.services a.viewMore {
+  padding: 0 25px 0.4em 0;
+  font-size: 0.8em;
+  background-position: right 2px;
+}
+
+a.viewMore:hover {
+  background-image: url(../../img/store/background_viewMore_arrow_over.gif);
+}
+
+a.videoThumb {
+  width: 252px;
+  height: 141px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+a.videoThumb span {
+  display: none;
+}
+
+div#homeMiddleBoxes {
+  margin-top: 17px;
+  float: none;
+}
+
+div#homeMiddleBoxes div.top {
+  background-image: url(../../img/store/background_homeMid_top.gif);
+}
+
+div#homeMiddleBoxes div.middle {
+  padding: 6px 0 23px;
+  background-image: url(../../img/store/background_homeMid_middle.gif);
+}
+
+div#homeMiddleBoxes div.bottom {
+  background-image: url(../../img/store/background_homeMid_bottom.gif);
+}
+
+div#findOutWhy {
+  width: 252px;
+  margin: 0 71px 0 16px;
+  float: left;
+}
+
+div#findOutWhy div#videoArea {
+  width: 252px;
+  height: 141px;
+  margin-bottom: 3px;
+  display: block;
+}
+
+div#findOutWhy .dinDlHead {
+  width: 204px;
+  margin: 0 auto;
+}
+
+div#findOutWhy img.heading {
+  margin: 18px 0 25px 22px;
+}
+
+div#findOutWhy .video-link {
+  margin: 0 23px 0 23px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0 10px 30px;
+  background: url(../../img/store/button_play_small_off.gif) no-repeat 0 8px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+div#findOutWhy .video-link.first {
+  border-top: 1px solid #eee;
+}
+
+div#findOutWhy p,
+div#whatElse div.column p,
+div#tucows p {
+  width: 204px;
+  margin: 0.6em auto 0;
+  line-height: 1.4em;
+}
+
+div#findOutWhy p.viewMore,
+div#whatElse div.column p.viewMore,
+div#easyAffordable p.viewMore,
+div#tucows p.viewMore {
+  margin-top: 0.9em;
+}
+
+div#findOutWhy p.viewMore a.viewMore,
+div#whatElse div.column p.viewMore a.viewMore,
+div#easyAffordable p.viewMore,
+div#tucows p.viewMore a.viewMore {
+  font-size: 1em;
+}
+
+div#easyAffordable {
+  width: 485px;
+  margin: 0;
+  float: left;
+}
+
+div#easyAffordable .dinDlHead,
+div#easyAffordable img.heading {
+  margin-top: 15px;
+}
+
+div#easyAffordable div.topRow {
+  margin-top: 26px;
+}
+
+div#easyAffordable div.column {
+  width: 130px;
+  margin: 0 30px 0 0;
+  float: left;
+}
+
+div#easyAffordable div.colEnd {
+  margin: 0;
+}
+
+div#easyAffordable div.column p {
+  margin-top: 0.6em;
+}
+
+div#easyAffordable div.column div.priceBox {
+  width: 130px;
+  height: 91px;
+  margin-top: 18px;
+  background: url(../../img/store/background_startingFrom.gif) no-repeat left top;
+  position: relative;
+}
+
+div#easyAffordable div.column div.priceBox p {
+  margin: 0;
+  font-size: 0.6em;
+  position: absolute;
+}
+
+div#easyAffordable div.column div.priceBox p.sf {
+  left: 15px;
+  top: 10px;
+}
+
+div#easyAffordable div.column div.priceBox p.year {
+  left: 64px;
+  top: 67px;
+}
+
+div#easyAffordable div.column div.priceBox .dinMedHead,
+div#easyAffordable div.column div.priceBox img.number {
+  position: absolute;
+  left: 15px;
+  top: 53px;
+}
+
+div#easyAffordable div.separator {
+  width: 524px;
+  height: 26px;
+  margin-top: 31px;
+  background: url(../../img/store/background_personalize_bottom.gif) no-repeat left bottom;
+  position: relative;
+  left: -39px;
+}
+
+div#easyAffordable img.headingAlt {
+  margin-top: 30px;
+}
+
+div#whatElse {
+  margin-top: 2.5em;
+}
+
+div#whatElse div.column {
+  width: 230px;
+  margin: 1.5em 0 0 34px;
+  float: left;
+  position: relative;
+}
+
+div#whatElse div.column .dinDlHead {
+  margin: 0 0 0 50px;
+}
+
+div#whatElse div.column img.logo {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+div#whatElse div.column p {
+  width: auto;
+  margin: 0.9em 0 0;
+}
+
+div#whatElse div.column p.viewMore {
+  margin-top: 0.9em;
+}
+
+div#homeBottomBoxes {
+  margin-top: 3.5em;
+}
+
+body.upgrade div#homeBottomBoxes,
+body.services div#homeBottomBoxes,
+body.about div#homeBottomBoxes {
+  margin-top: 2.3em;
+}
+
+div#tucows {
+  width: 257px;
+  float: left;
+}
+
+div#tucows img.heading {
+  margin-bottom: 10px;
+}
+
+div#tucows img.logo {
+  margin: 20px 0 0 34px;
+}
+
+div#tucows p {
+  width: auto;
+  margin: 0.8em 0 0 31px;
+}
+
+div#tucows p.viewMore {
+  margin-top: 0.9em;
+}
+
+div#saying {
+  width: 567px;
+  float: left;
+}
+
+div#saying img.heading {
+  margin: 0 0 5px 47px;
+}
+
+div#saying .dinDlHead {
+  margin: 0 0 0 47px;
+}
+
+div#saying div.bubbleTop {
+  height: 39px;
+  background: url(../../img/store/background_saying_top.gif) no-repeat left top;
+}
+
+div#saying div.bubbleMiddle {
+  padding: 0 75px;
+  background: url(../../img/store/background_saying_middle.gif) repeat-y left;
+}
+
+div#saying div.bubbleMiddle p {
+  margin-top: 0;
+  padding-bottom: 15px;
+  font-size: 1em;
+}
+
+div#saying div.bubbleMiddle p em img {
+  position: relative;
+  top: -1px;
+}
+
+div#saying div.bubbleBottom {
+  height: 32px;
+  background: url(../../img/store/background_saying_bottom.gif) no-repeat left top;
+}
+
+#testimonial-author {
+  white-space: nowrap;
+}
+
+/*-----------------------------------------
+  SEARCH RESULTS PAGES
+-------------------------------------------*/
+
+form.topNav, form.topNav fieldset {
+  width: 504px;
+  /* overflow: hidden;*/
+}
+
+body.searchResults form.topNav {
+  position: relative;
+  z-index: 350;
+}
+
+form.topNav fieldset div.textfield,
+form.topNav fieldset div.selectmenu,
+form.topNav fieldset input.searchBtn {
+  float: left;
+}
+
+form fieldset div.textfield,
+form.topNav fieldset div.selectmenu {
+  height: 39px;
+  position: relative;
+}
+
+form fieldset div.textfield {
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+form.topNav fieldset div.textfield {
+  width: 321px;
+  background-image: url(/img/store/background_form_top_textfield.gif);
+}
+
+form.topNav fieldset div.firstNameField {
+  width: 205px;
+  margin: 0 5px 0 0;
+  background-image: url(/img/store/background_form_top_textfield_home_firstname.gif);
+}
+
+form.topNav fieldset div.lastNameField {
+  width: 207px;
+  margin: 0 5px 0 0;
+  background-image: url(/img/store/background_form_top_textfield_home_lastname.gif);
+}
+
+div#personal-search-again,
+div#domain-search-again {
+  margin-bottom: 25px;
+}
+
+div#personal-search-again p,
+div#domain-search-again p {
+  margin-top: 9px;
+}
+
+body.shoppingCart div#personal-search-again,
+body.shoppingCart div#domain-search-again {
+  margin-bottom: 0;
+}
+
+div#personal-search-again form.topNav fieldset div.firstNameField {
+  width: 205px;
+  margin: 0 5px 0 0;
+  background-image: url(../../img/store/background_form_top_textfield_home_firstname.gif);
+}
+
+div#personal-search-again form.topNav fieldset div.lastNameField {
+  width: 207px;
+  margin: 0 5px 0 0;
+  background-image: url(../../img/store/background_form_top_textfield_home_lastname.gif);
+}
+
+.other-search-link {
+  font-size: 11px;
+  padding: 3px 0;
+}
+
+form fieldset div.textfield input {
+  margin: 0;
+  padding: 0;
+  font: 1em Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  border-width: 0;
+  position: absolute;
+  left: 39px;
+  top: 11px;
+}
+
+form.topNav fieldset div.textfield input {
+  width: 274px;
+}
+
+form.topNav fieldset div.firstNameField input {
+  width: 158px;
+}
+
+form.topNav fieldset div.lastNameField input {
+  width: 187px;
+  left: 12px;
+}
+
+form fieldset div.selectmenu {
+  overflow: visible;
+}
+
+form.topNav fieldset div.selectmenu {
+  width: 103px;
+}
+
+div.toolTipGreen {
+  width: 166px;
+  padding-bottom: 32px;
+  background: url(../../img/store/background_toolTip_green.gif) no-repeat left bottom;
+  position: absolute;
+  z-index: 1000;
+}
+
+div.toolTipGreen div.ttTop {
+  height: 16px;
+  overflow: hidden;
+  background: url(../../img/store/background_toolTip_green_top.gif) no-repeat left top;
+}
+
+div.toolTipGreen p {
+  width: 140px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+}
+
+div#wrapper {
+  width: 824px;
+  margin: 0 auto;
+  padding: 126px 10px 0;
+  position: relative;
+}
+
+div#wrapper img.logoTop {
+  position: absolute;
+  left: 10px;
+  top: 60px;
+}
+
+p#hereToHelp {
+  font-size: 1em;
+  position: absolute;
+  right: 10px;
+  top: 16px;
+}
+
+div#srCol {
+  width: 584px;
+  margin: 0 16px 0 0;
+  background: #fff url(../../img/store/background_searchResults_middle.gif) repeat-y left;
+}
+
+div#srCol div.top {
+  background-image: url(../../img/store/background_searchResults_top.gif);
+}
+
+div#srCol div.extraBox {
+    height: 16px; background-color: #fff;}
+
+div#srCol div.bottom {
+  background-image: url(../../img/store/background_searchResults_bottom.gif);
+}
+
+p#availableHead {
+	font-size: 1.3em;}
+body.transferCart p#availableHead {
+	margin-top: 0;}
+p.vmPara {
+        margin: 0.2em 0 3px;}
+body.emailSearch p.vmPara {
+	margin: 0.8em 0 3px;}
+
+div#domEmPkgs {
+	overflow: hidden;}
+div#srCol div.slideDown div.top, div#srCol div.slideDown div.bottom {
+	height: 6px; overflow: hidden; background-repeat: no-repeat; background-position: left top;}
+div#srCol div.slideDown div.top {
+	height: 26px; background-image: url(../../img/store/background_domEmPkgs_top.gif);}
+body.emailSearch div#srCol div.slideDown div.top {
+	background-image: url(../../img/store/background_domEmPkgs_single_top.gif);}
+div#srCol div.slideDown div.bottom {
+	background-image: url(../../img/store/background_domEmPkgs_bottom.gif);}
+body.emailSearch div#srCol div.slideDown div.bottom {
+	background-image: url(../../img/store/background_domEmPkgs_single_bottom.gif);}
+div#srCol div.slideDown div.middle {
+	padding: 10px 0 18px; background: url(../../img/store/background_domEmPkgs_middle.gif) repeat-y left;}
+body.emailSearch div#srCol div.slideDown div.middle {
+	background-image: url(../../img/store/background_domEmPkgs_single_middle.gif);}
+div#srCol div.slideDown div.middle div.domains, div#srCol div.slideDown div.middle div.email {
+	width: 213px; float: left;}
+div#srCol div.slideDown div.middle div.domains {
+	margin: 0 48px 0 15px;}
+div#srCol div.slideDown div.middle div.mailboxes {
+	width: 474px; margin: 0 0 0 15px;}
+
+form.srLists fieldset {
+	margin-top: 20px; position: relative;}
+body.emailSearch form.srLists fieldset {
+	margin-top: 12px;}
+div.fieldset {
+	position: relative;}
+form.srLists fieldset div.tableWrapper {
+	padding-bottom: 1.1em; padding-bottom: 37px; overflow: hidden; position: relative;}
+body.emailSearch form.srLists fieldset div.tableWrapper {
+	overflow: visible;}
+form.srLists fieldset div.tableWrapper div.bottomPadding {
+	width: 584px; height: 38px; position: absolute; left: 0; bottom: 0; background-color: #fff;}
+table.domainList {
+	width: 504px;}
+body.shoppingCart table.domainList {
+	width: 744px; margin: 20px 0 16px;}
+body.confirm table.domainList,
+body.thankyou table.domainList {
+  width: 744px;
+  margin: 20px 0 16px;
+}
+table.domainList thead, table.domainList thead tr {
+	height: 63px;}
+table.domainList th, table.domainList td {
+	padding: 12px;}
+table.domainList th {
+	height: 39px; font-size: 0.6em; font-weight: normal; line-height: 1em; vertical-align: bottom; border: 1px solid #fff; border-width: 0 1px 0 0; background: url(../../img/store/background_domainList_thead.gif) no-repeat -20px top;}
+table.domainList th {
+	background-image: url(../../img/store/background_shoppingList_thead.gif);}
+table.domainList th strong {
+	font-size: 1.4em; font-weight: normal; line-height: 1.4em;}
+table.domainList td {
+	font-size: 0.8em; vertical-align: middle; border: 1px solid #eee; border-width: 0 1px 1px 0; background-color: #fff;}
+body.emailSearch table.domainList th.heading {
+	border-width: 0;}
+body.emailSearch table.domainList td.heading {
+	border-width: 0 0 1px;}
+body.verifyInfo table.domainList td {
+	vertical-align: top;}
+table.domainList td.heading div.rule {
+	width: 241px; height: 1px; overflow: hidden; background-color: #eee; position: absolute; left: 0; bottom: 34px; z-index: 300;}
+table.domainList td em {
+	font-size: 0.9em; font-style: normal;}
+table.domainList td em span {
+	color: #d50109;}
+table.domainList td.heading a.openSteps, table.domainList td.heading a.closeSteps {
+	padding: 0 0 0 17px; color: #6f7a82; background-repeat: no-repeat; background-position: left 3px;}
+table.domainList td.heading a.openSteps {
+	background-image: url(../../img/store/button_chevron_closed_off.gif);}
+table.domainList td.heading a.closeSteps {
+	background-image: url(../../img/store/button_chevron_open_off.gif);}
+table.domainList td.heading div.steps {
+	margin: 0 0 0 18px;}
+table.domainList td.heading ol.steps {
+	margin: 0 0 0 37px; padding: 8px 0 18px;}
+table.domainList td.heading ol.steps li {
+	padding-top: 17px; list-style: decimal; color: #bcc1c5; position: relative;}
+table.domainList td.heading ol.steps li.started, table.domainList td.heading ol.steps li.completed {
+	color: #6f7a82;}
+table.domainList td.heading ol.steps li span {
+	font-size: 0.8em; color: #9facb5;}
+table.domainList td.heading ol.steps li strong.alert {
+	font-weight: normal; color: #b90108;}
+table.domainList td.heading ol.steps li img.started {
+	position: absolute; right: -42px; top: 20px;}
+table.domainList td.heading ol.steps li.completed img.started, table.domainList td.heading ol.steps li img.completed {
+	display: none;}
+table.domainList td.heading ol.steps li.completed img.completed {
+	display: inline;}
+table.domainList tr.ready td {
+	background-color: #f2f9ed;}
+table.domainList tr.notEligible td {
+	background-color: #fcf7f8;}
+table.domainList tr.selected td {
+	background-color: #f4faee;}
+table.domainList .heading {
+	text-align: left;}
+table.domainList th.heading {
+	font-size: 1.1em; background: url(../../img/store/background_domainList_thead.gif) no-repeat left top;}
+table.domainList th.heading img.headingNoQuestion {
+	position: relative; top: 4px;}
+table.domainList th.heading div.questionWrap {
+	position: relative;}
+table.domainList th.heading div.questionWrap img.heading {
+	position: relative; top: 4px;}
+table.domainList th#expDomains div.questionWrap img.heading {
+	position: relative; top: 2px;}
+table.domainList th.heading div.questionWrap img.questionMark {
+	position: relative; left: 4px; top: 5px;}
+form.srLists fieldset table.domainList td.heading div.note, form.srLists fieldset div.note {
+	width: 504px; height: 60px; font-size: 1.2em; border-top: 1px solid #fff; background-color: #f3faee; position: absolute; left: 0; top: 62px; z-index: 300;}
+form.srLists fieldset div.note {
+	height: auto; padding-bottom: 12px; position: static;}
+form.srLists fieldset table.domainList td.heading div.note p, form.srLists fieldset div.note p {
+	margin: 12px 14px 0;}
+form.srLists fieldset div.note p {
+	font-size: 0.7em;}
+form.srLists fieldset table.domainList td.heading div.note a, form.srLists fieldset div.note a {
+	width: 9px; height: 9px; display: block; overflow: hidden; background: url(../../img/store/button_note_close_off.gif) no-repeat left top; position: absolute; right: 12px; top: 12px;}
+form.srLists fieldset div.note a span {
+	display: none;}
+
+form.srLists fieldset div.ttContainer {
+	height: 1px; position: relative; overflow: visible; z-index: 301;}
+body.verifyInfo div.topMarg {
+	margin-top: 30px;}
+form.srLists fieldset div.ttContainer div.tooltipL, div.fieldset div.ttContainer div.tooltipL {
+	width: 264px; position: absolute; left: 193px; top: 23px; z-index: 301;}
+div#expD div.ttContainer div.tooltipL {
+	left: 243px;}
+div#nonHovD div.ttContainer div.tooltipL {
+	left: 263px;}
+fieldset#availableEmailAddresses div.ttContainer div.tooltipL {
+	left: 235px;}
+form.srLists fieldset div.ttContainer div.tooltipL div.ttTop, form.srLists fieldset div.ttContainer div.tooltipL div.ttBottom, div.fieldset div.ttContainer div.tooltipL div.ttTop, div.fieldset div.ttContainer div.tooltipL div.ttBottom {
+	overflow: hidden; background-repeat: no-repeat; background-position: left top;}
+form.srLists fieldset div.ttContainer div.tooltipL div.ttTop, div.fieldset div.ttContainer div.tooltipL div.ttTop {
+	height: 13px; background-image: url(../../img/store/background_tooltipL_top.png);}
+form.srLists fieldset div.ttContainer div.tooltipL div.ttBottom, div.fieldset div.ttContainer div.tooltipL div.ttBottom {
+	height: 13px; background-image: url(../../img/store/background_tooltipL_bottom.png);}
+form.srLists fieldset div.ttContainer div.tooltipL div.ttMiddle, div.fieldset div.ttContainer div.tooltipL div.ttMiddle {
+	padding: 0 16px 0 26px; font-size: 0.7em; font-weight: bold; color: #fff; background: url(../../img/store/background_tooltipL_middle.png) no-repeat left top;}
+
+
+form.srLists fieldset div.ttMovableContainer {
+	height: 1px; position: absolute; top: 0px; left: 0px; overflow: visible; z-index: 301;}
+body.verifyInfo div.topMarg {
+	margin-top: 30px;}
+form.srLists fieldset div.ttMovableContainer div.tooltipL, div.fieldset div.ttMovableContainer div.tooltipL {
+	width: 264px; position: absolute; left: 0px; top: -23px; z-index: 301;}
+form.srLists fieldset div.ttMovableContainer div.tooltipL div.ttTop, form.srLists fieldset div.ttMovableContainer div.tooltipL div.ttBottom, div.fieldset div.ttMovableContainer div.tooltipL div.ttTop, div.fieldset div.ttMovableContainer div.tooltipL div.ttBottom {
+	overflow: hidden; background-repeat: no-repeat; background-position: left top;}
+form.srLists fieldset div.ttMovableContainer div.tooltipL div.ttTop, div.fieldset div.ttMovableContainer div.tooltipL div.ttTop {
+	height: 13px; background-image: url(../../img/store/background_tooltipL_top.png);}
+form.srLists fieldset div.ttMovableContainer div.tooltipL div.ttBottom, div.fieldset div.ttMovableContainer div.tooltipL div.ttBottom {
+	height: 13px; background-image: url(../../img/store/background_tooltipL_bottom.png);}
+form.srLists fieldset div.ttMovableContainer div.tooltipL div.ttMiddle, div.fieldset div.ttMovableContainer div.tooltipL div.ttMiddle {
+	padding: 0 16px 0 26px; font-size: 0.7em; font-weight: bold; color: #fff; background: url(../../img/store/background_tooltipL_middle.png) no-repeat left top;}
+
+
+
+
+
+
+form.srLists fieldset div.tableWrapper {
+	position: relative;}
+form.srLists fieldset div.tableWrapper p.tipPara {
+	font-size: 0.7em; position: absolute; left: 13px; bottom: 15px;}
+body.emailSearch form.srLists fieldset div.tableWrapper p.tipPara {
+	width: 479px; padding: 0 13px 17px; left: 0; bottom: -16px;}
+table.domainList td.heading a.remove {
+	margin: 0 10px 0 0; position: relative; top: -0.1em;}
+table.domainList th.heading object.sIFR-flash {
+	position: relative; bottom: -0.4em;}
+table.domainList .pricing {
+	width: 48px; text-align: center;}
+body.verifyInfo table.domainList .pricing {
+	width: 38px;}
+table.domainList .addMailboxes {
+	width: 90px; text-align: center;}
+table.domainList .addToCart {
+	width: 32px; text-align: center; border-right-width: 0;}
+body.transferCart table.domainList td.addToCart {
+	vertical-align: top;}
+table.domainList .addMailboxCheck {
+	width: 63px; text-align: center;}
+table.domainList .tasksDone {
+	width: 30px; text-align: center;}
+body.transferCart table.domainList td.tasksDone {
+	vertical-align: top;}
+body.transferCart table.domainList td.tasksDone span {
+	position: relative; top: 3;}
+table.domainList .amcLast {
+	border-right-width: 0;}
+table.domainList .status {
+	width: 210px; border-right-width: 0;}
+table.domainList .status a.transferDom {
+	width: 91px; height: 21px; margin-top: 10px; display: block; background: url(../../img/store/button_transfer_domain_off.gif) no-repeat left top;}
+table.domainList .status a.transferDom:hover {
+	background-image: url(../../img/store/button_transfer_domain_on.gif);}
+table.domainList .status a.transferDom span {
+	display: none;}
+table.domainList .total {
+	width: 40px; text-align: center; border-right-width: 0;}
+table.domainList th.addToCart, table.domainList th.total, table.domainList th.amcLast {
+	background: url(../../img/store/background_domainList_thead.gif) no-repeat right top;}
+table.domainList td.addToCart input.checkPlus, table.domainList td.addMailboxCheck input.checkPlus {
+	position: relative; top: 1px;}
+body.verifyInfo table.domainList td.addToCart input.checkPlus {
+	margin-top: -3px;}
+table.domainList td.addToCart div.toolTipCont, table.domainList td.addMailboxCheck div.toolTipCont {
+	height: 1px; overflow: visible; position: relative; z-index: 400;}
+table.domainList td.addToCart div.toolTipCont div.toolTipGreen, table.domainList td.addMailboxCheck div.toolTipCont div.toolTipGreen {
+	position: absolute; left: -125px; top: -95px;}
+table.domainList td.addMailboxCheck div.toolTipCont div.toolTipGreen {
+	left: -108px; top: -97px;}
+table.domainList td.total {
+	font-size: 0.9em; text-align: right;}
+table.domainList td.viewMore, table.domainList td.perYear {
+	border-width: 0 0 1px 0;}
+table.domainList td.perYear {
+	padding: 12px 0 12px 12px; font-size: 0.6em; text-align: right;}
+table.domainList tr.subTotal td {
+	vertical-align: top; border-width: 0 0 1px;}
+table.domainList tr.subTotal td.heading p {
+	margin-top: 0; font-size: 0.7em; line-height: 1.5em;}
+table.domainList tr.subTotal td.heading p strong {
+	font-size: 1.3em;}
+table.domainList tr.subTotal td.heading p a strong {
+	font-size: 1em;}
+table.domainList tr.subTotal td.heading div.checkbox label {
+	position: relative; top: 0.1em;}
+table.domainList tr.subTotal td.heading div.terms {
+	position: relative; top: 4.5em;}
+table.domainList tr.subTotal td.addMailboxes {
+	font-size: 0.9em;}
+table.domainList tr.subTotal td.leading, table.domainList tr.subTotal td.alignRight {
+	text-align: right;}
+table.domainList tr.subTotal td.leading {
+	line-height: 1.7em;}
+
+/*-----------------------------------------
+  EMAIL CART
+-------------------------------------------*/
+
+table.emailItems {
+  width: 744px;
+  margin: 20px 0 16px;
+}
+
+table.emailItems thead,
+table.emailItems thead tr {
+  height: 63px;
+}
+
+table.emailItems th,
+table.emailItems td {
+  padding: 12px;
+}
+
+table.emailItems th {
+  height: 39px;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.1em;
+  vertical-align: bottom;
+  border: 1px solid #fff;
+  border-width: 0 1px 0 0;
+}
+
+table.emailItems th {
+  background: url(../../img/store/background_shoppingList_thead.gif) no-repeat left top;
+}
+
+table.emailItems td {
+  font-size: 0.8em;
+  vertical-align: middle;
+  border: 1px solid #eee;
+  border-width: 0 1px 1px 0;
+  background-color: #fff;
+}
+
+table.emailItems tr.selected td {
+  background-color: #f4faee;
+}
+
+table.emailItems tbody tr.item td.over {
+  background-color: #f4faee;
+}
+
+table.emailItems .col1 {
+  text-align: left;
+}
+
+table.emailItems th.col1 {
+  font-size: 1.1em;
+}
+
+table.emailItems td.col1 a.remove {
+  margin: 0 10px 0 0;
+  position: relative;
+  top: -0.1em;
+}
+
+table.emailItems th.heading .dinDlHead {
+  width: 172px;
+}
+
+table.emailItems th.col1 object.sIFR-flash {
+  position: relative;
+  bottom: -0.4em;
+}
+
+table.emailItems .col2 {
+  width: 48px;
+  text-align: center;
+}
+
+table.emailItems .col3 {
+  width: 90px;
+  text-align: center;
+}
+
+table.emailItems .col4 {
+  width: 50px;
+  text-align: center;
+  border-right-width: 0;
+}
+
+table.emailItems th.col4 {
+  background: url(../../img/store/background_domainList_thead.gif) no-repeat right top;
+}
+
+table.emailItems td.col4 {
+  font-size: 0.9em;
+  text-align: right;
+}
+
+table.emailItems tr.subTotal td {
+  vertical-align: top;
+  border-width: 0 0 1px;
+}
+
+table.emailItems tr.subTotal td.col1 p {
+  margin-top: 0;
+  font-size: 11px;
+  line-height: 1.5em;
+}
+
+table.emailItems tr.subTotal td.col4 {
+  font-weight: bold;
+  text-align: right;
+}
+
+table.emailItems tr.subTotal td.col1 p strong {
+  font-size: 1.3em;
+}
+
+table.emailItems tr.subTotal td.col3 {
+  font-size: 0.9em;
+  text-align: right;
+}
+
+table.emailItems tr.subTotal td.col1 div.clearfloat {
+  width: 310px;
+  margin-top: 14px;
+}
+
+table.emailItems tr.subTotal td.col1 div.clearfloat div.textfield {
+  width: 220px;
+  margin: 0 5px 0 0;
+  float: left;
+  position: relative;
+  background: url(../../img/store/background_form_textfield_half.gif) no-repeat left top;
+}
+
+table.emailItems tr.subTotal td.col1 div.clearfloat div.textfield input {
+  width: 187px;
+  left: 12px;
+}
+
+table.emailItems input#btnApply {
+  float: left;
+}
+
+table.emailItems td.col2 { white-space: nowrap; }
+table.emailItems td.col3 { white-space: nowrap; }
+table.emailItems td.col4 { white-space: nowrap; }
+
+/*-----------------------------------------
+  RENEW CART
+-------------------------------------------*/
+
+table.renewItems {
+  width: 744px;
+  margin: 20px 0 16px;
+}
+
+table.renewItems thead,
+table.renewItems thead tr {
+  height: 63px;
+}
+table.renewItems th,
+table.renewItems td {
+  padding: 12px;
+}
+
+table.renewItems th {
+  height: 39px;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.1em;
+  vertical-align: bottom;
+  border: 1px solid #fff;
+  border-width: 0 1px 0 0;
+}
+
+table.renewItems th {
+  background: url(../../img/store/background_shoppingList_thead.gif) no-repeat left top;
+}
+
+table.renewItems td {
+  font-size: 0.8em;
+  vertical-align: middle;
+  border: 1px solid #eee;
+  border-width: 0 1px 1px 0;
+  background-color: #fff;
+}
+
+table.renewItems tr.selected td {
+  background-color: #f4faee;
+}
+
+table.renewItems tbody tr.item td.over {
+  background-color: #f4faee;
+}
+
+table.renewItems .col1 {
+  text-align: left;
+}
+
+table.renewItems th.col1 {
+  font-size: 1.1em;
+}
+
+table.renewItems td.col1 a.remove {
+  margin: 0 10px 0 0;
+  position: relative;
+  top: -0.1em;
+}
+
+table.renewItems th.heading .dinDlHead {
+  width: 172px;
+}
+
+table.renewItems th.col1 object.sIFR-flash {
+  position: relative;
+  bottom: -0.4em;
+}
+
+table.renewItems .col2 {
+  width: 48px;
+  text-align: center;
+}
+
+table.renewItems .col3 {
+  width: 120px;
+  text-align: center;
+}
+
+table.renewItems .col4 {
+  width: 50px;
+  text-align: center;
+  border-right-width: 0;
+}
+
+table.renewItems th.col4 {
+  background: url(../../img/store/background_domainList_thead.gif) no-repeat right top;
+}
+
+table.renewItems td.col4 {
+  font-size: 0.9em;
+  text-align: right;
+}
+
+table.renewItems tr.subTotal td {
+  vertical-align: top;
+  border-width: 0 0 1px;
+}
+
+table.renewItems tr.subTotal td.col1 p {
+  margin-top: 0;
+  font-size: 11px;
+  line-height: 1.5em;
+}
+
+table.renewItems tr.subTotal td.col4 {
+  font-weight: bold;
+  text-align: right;
+}
+
+table.renewItems tr.subTotal td.col1 p strong {
+  font-size: 1.3em;
+}
+
+table.renewItems tr.subTotal td.col3 {
+  font-size: 0.9em;
+  text-align: right;
+}
+
+table.renewItems tr.subTotal td.col1 div.clearfloat {
+  width: 310px;
+  margin-top: 14px;
+}
+
+table.renewItems tr.subTotal td.col1 div.clearfloat div.textfield {
+  width: 220px;
+  margin: 0 5px 0 0;
+  float: left;
+  position: relative;
+  background: url(../../img/store/background_form_textfield_half.gif) no-repeat left top;
+}
+
+table.renewItems tr.subTotal td.col1 div.clearfloat div.textfield input {
+  width: 187px;
+  left: 12px;
+}
+
+table.renewItems input#btnApply {
+  float: left;
+}
+
+table.renewItems td.col3 select {
+  width: 120px;
+  font-size: 1em;
+  color: #6F7A82;
+  background-color: #fefefe;
+  border: 1px solid #B8BDC1;
+  padding: 3px 4px 4px 4px;
+}
+
+table.renewItems td.col2 { white-space: nowrap; }
+table.renewItems td.col3 { white-space: nowrap; }
+table.renewItems td.col4 { white-space: nowrap; }
+
+/*-----------------------------------------
+  COUPON CODE
+-------------------------------------------*/
+
+#coupon-new {
+  margin-top: 8px;
+}
+
+#coupon-new #code {
+  font-size: 16px;
+  color: #6F7A82;
+}
+
+#coupon-exist .coupon {
+  font-size: 13px;
+}
+
+#cart-discount {
+  font-weight: normal !important;
+  text-align: right;
+  white-space: nowrap;
+}
+
+#cart-subtotal {
+  font-weight: normal !important;
+  white-space: nowrap;
+}
+
+#cart-total {
+  white-space: nowrap;
+}
+
+#discount-row td {
+  white-space: nowrap;
+}
+
+/*-----------------------------------------
+  MINI-CART
+-------------------------------------------*/
+
+div#scCol {
+  width: 224px;
+  background: #fff url(../../img/store/background_shoppingCartMini_middle.gif) repeat-y left;
+}
+
+div#scCol div.top {
+  background-image: url(../../img/store/background_shoppingCartMini_top.gif);
+}
+
+div#scCol div.bottom {
+  background-image: url(../../img/store/background_shoppingCartMini_bottom.gif);
+}
+
+div#scCol div.colWrap {
+  margin: 0 10px;
+}
+
+div#scCol div.colWrap img.heading {
+  margin: 0 0 0 30px;
+}
+
+div#cartEmpty,
+ul#cartItems li {
+  padding: 0 30px;
+}
+
+ul#cartItems li div {
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+ul#cartItems li div h2 {
+  margin: 0;
+  padding: 1em 0 0;
+  font-size: 0.8em;
+}
+
+ul#cartItems li div p.sub {
+  margin: 0.35em 0 3.4em 0;
+  font-size: 11px;
+}
+
+ul#cartItems li div p.cost,
+ul#cartItems li div a.removeX {
+  position: absolute;
+}
+
+ul#cartItems li div p.cost {
+  margin: 0;
+  font-size: 0.9em;
+  text-align: right;
+  right: 0;
+  bottom: 0.8em;
+}
+
+ul#cartItems li div a.removeX {
+  left: 0;
+  bottom: 0.9em;
+}
+
+.cart-price-disclaimer {
+  font-size: 10px;
+  margin: 0 0 20px 0;
+  text-align: right;
+}
+
+div#scCol #loading {
+  font-size: 12px;
+  white-space: nowrap;
+  margin: 15px 30px;
+}
+
+div#total {
+  margin: 0 30px;
+  position: relative;
+}
+
+div#total p {
+  margin:0 0 0.5em 0;
+  font-size: 0.9em;
+}
+
+div#total p.cost {
+  font-weight: bold;
+  margin: 0;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+div#total #minicart-subtotal {
+  margin-top: 0.9em;
+}
+
+div#total #minicart-subtotal,
+div#total #minicart-discount,
+div#total #minicart-total {
+  position: relative;
+}
+
+div#total #minicart-subtotal p.amount {
+  font-weight: normal;
+  margin: 0;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+}
+
+div#total #minicart-discount p.amount {
+  font-weight: normal;
+  margin: 0;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+}
+
+div#total #minicart-total p.amount {
+  font-weight: bold;
+  margin: 0;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+}
+
+div#total a {
+  width: 144px;
+  height: 39px;
+  display: block;
+  margin-top: 20px;
+  background: url(../../img/store/button_checkout_off.gif) no-repeat left top;
+}
+
+div#total a:hover {
+  background-image: url(../../img/store/button_checkout_over.gif);
+}
+
+div#total a span {
+  display: none;
+}
+
+tr.subTotal td.heading div.clearfloat {
+  width: 310px;
+  margin-top: 14px;
+  /* overflow: hidden;*/
+}
+
+tr.subTotal td.heading div.clearfloat div.textfield {
+  width: 220px;
+  margin: 0 5px 0 0;
+  float: left;
+  position: relative;
+  background: url(../../img/store/background_form_textfield_half.gif) no-repeat left top;
+}
+
+tr.subTotal td.heading div.clearfloat div.textfield input {
+  width: 187px;
+  left: 12px;
+}
+
+input#btnApply {
+  float: left;
+}
+
+div#scButtons {
+  font-size: 0.8em;
+  vertical-align: top;
+}
+
+div#scButtons .continue {
+  float: left;
+  width: 460px;
+}
+
+div#scButtons input {
+  float: right; margin: 0 0 0 16px;}
+
+.tip {
+  font-size: 11px;
+  line-height: 1.2em;
+}
+
+/*-----------------------------------------
+  STANDARD CONTAINER
+-------------------------------------------*/
+
+div#regRec {
+  width: 824px;
+}
+
+body.pricing div#regRec,
+body.upgrade div#regRec,
+body.aboutus div#regRec,
+body.services div#regRec,
+body.about div#regRec {
+  margin-top: 16px;
+}
+
+body.home div#regRec {
+  margin-top: 17px;
+}
+
+div#regRec div.top {
+  background-image: url(../../img/store/background_regPage_top.gif);
+}
+
+div#regRec div.middle {
+  width: 740px;
+  padding: 0 42px 32px;
+  background: url(../../img/store/background_regPage_middle.gif) repeat-y left;
+  min-height: 370px;
+}
+
+body.shoppingCart div#regRec div.middle {
+  padding-top: 29px;
+}
+
+div#regRec div.bottom {
+  background-image: url(../../img/store/background_regPage_bottom.gif);
+}
+
+div#regRec div.middle img.heading {
+  margin-top: 33px;
+}
+
+div#breadcrumbs {
+  padding-top: 40px;
+}
+
+body.shoppingCart div#breadcrumbs {
+  padding-top: 35px;
+}
+
+div#heading {
+  padding-top: 35px;
+}
+
+/*-----------------------------------------
+  COMMON ERROR BOX
+-------------------------------------------*/
+
+#error-box {
+  width: 824px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  background: url(../../img/store/error_box_bottom.gif) no-repeat left bottom;
+}
+
+#error-box .top {
+  background: url(../../img/store/error_box_top.gif) no-repeat left top;
+}
+
+#error-box .content {
+  background-color: #D02010;
+  color: #fff;
+  padding: 0 18px;
+}
+
+#error-box .content img.heading {
+  margin: 10px 0 4px;
+}
+
+#error-box .content p {
+  margin-top: 0.2em;
+  line-height: 1.4em;
+  font-size: 13px !important;
+}
+
+#error-box ul {
+  margin: 15px 20px 0 20px;
+}
+
+#error-box ul li {
+  line-height: 1.6em;
+  font-size: 13px !important;
+  font-weight: bold;
+  padding: 0 0 0.4em 25px;
+  color: #fff;
+  background: url(../../img/store/background_viewMore_arrow_error.gif) no-repeat left 4px;
+}
+
+/*-----------------------------------------
+  COMMON MESSAGE BOX
+-------------------------------------------*/
+
+#message-box {
+  width: 789px;
+  margin: 0 auto 18px auto;
+  padding: 14px;
+  background-color: #677885;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  color: #E0F2FF;
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  -moz-box-shadow: 0 0 10px #000; /* outline radius for mozilla/firefox only */
+  -webkit-box-shadow: 0 0 10px #000;
+}
+
+/*-----------------------------------------
+  ORDER - ACCOUNT
+-------------------------------------------*/
+
+.round-box {
+  background-color: #E0F2FF;
+}
+
+.round-box .box-top {
+  background: url(../../img/store/corner_blue_top_right.gif) no-repeat top right;
+}
+
+.round-box .box-bottom {
+  background: url(../../img/store/corner_blue_bottom_right.gif) no-repeat top right;
+}
+
+.round-box .box-content {
+  padding: 12px 18px;
+}
+
+#account-login-wrapper {
+  width: 737px;
+  margin-top: 25px;
+}
+
+#account-login {
+  float: left;
+  width: 353px;
+}
+
+#account-create {
+  float: right;
+  width: 353px;
+}
+
+#account-login .box-content,
+#account-create .box-content {
+  height: 490px;
+}
+
+form.accountForm fieldset {
+  margin-top: 20px;
+}
+
+form.accountForm fieldset div.inputCont {
+  margin: 0 0 13px 0;
+  position: relative;
+}
+
+form.accountForm fieldset div.lead {
+  margin-top:25px;
+}
+
+form.accountForm label {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+form.accountForm label span.req {
+  font-weight: normal;
+  color: #d00000;
+}
+
+form.accountForm fieldset div.textfield {
+  width: 220px;
+  margin-top: 5px;
+  background-image: url(../../img/store/background_form_textfield_half.gif);
+}
+
+form.accountForm fieldset div.error div.textfield {
+  background-image: url(../../img/store/background_form_textfield_half_error.gif);
+}
+
+form.accountForm fieldset div.error div.textfield input {
+  background-color: #fff2f2;
+}
+
+form.accountForm fieldset div.error div.textfield {
+}
+
+form.accountForm fieldset div.textfield input {
+  width: 197px;
+  left: 12px;
+}
+form.accountForm fieldset .checkbox {
+  float: left;
+}
+
+form.accountForm fieldset div.checkbox {
+  width: 24px;
+  height: 23px;
+  margin: 0 16px 0 20px;
+  background: url(../../img/store/background_form_checkbox.gif) no-repeat left top;
+  position: relative;
+}
+
+form.accountForm fieldset div.checkbox input {
+  border-width: 0;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+}
+
+form.accountForm fieldset label.checkbox {
+  width: 323px;
+  font-weight: normal;
+  position: relative;
+  top: -0.2em;
+}
+
+form.accountForm input.btnRight {
+  margin-top: 18px;
+  float: right;
+}
+
+form.accountForm div.loginButton,
+form.accountForm div.createAccountButton {
+  margin-top: 15px;
+}
+
+div#regColLeft {
+  width: 500px;
+  margin: 18px 37px 0 0;
+  float: left;
+}
+
+/*-----------------------------------------
+  PASSWORD STRENGTH
+-------------------------------------------*/
+
+#password-strength {
+  display: none;
+}
+
+#password-strength.short,
+#password-strength.weak {
+  float: left;
+  background-color: #FFF2F2;
+  color: #707982;
+  height: 17px;
+  width: 70px;
+  border: 1px solid #D60000;
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: left;
+  margin: 5px 0 0 0;
+  padding: 10px;
+}
+
+#password-strength.good {
+  float: left;
+  background-color: #FBF7EB;
+  color: #707982;
+  height: 17px;
+  width: 70px;
+  border: 1px solid #D3BE2D;
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: left;
+  margin: 5px 0 0 0;
+  padding: 10px;
+}
+
+#password-strength.strong {
+  float: left;
+  background-color: #EDF9EB;
+  color: #707982;
+  height: 17px;
+  width: 70px;
+  border: 1px solid #53C235;
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: left;
+  margin: 5px 0 0 0;
+  padding: 10px;
+}
+
+/*-----------------------------------------
+  ORDER - REGISTRATION RECORD
+-------------------------------------------*/
+
+form.regForm,
+form.regForm fieldset {
+  width: 500px;
+}
+
+form.regForm div.fieldsetClear,
+form.regForm fieldset div.doubleClear {
+  display: none;
+}
+
+form.regForm fieldset {
+  margin-top: 18px;
+  background-color: #e0f2ff;
+}
+form.regForm fieldset.lead {
+  margin-top: 0;
+}
+
+form.regForm fieldset div.top,
+form.regForm fieldset div.bottom {
+  height: 10px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+div#regRec form.regForm fieldset div.top {
+  background-image: url(../../img/store/background_regBox_top.gif);
+}
+
+div#regRec form.regForm fieldset div.bottom {
+  background-image: url(../../img/store/background_regBox_bottom.gif);
+}
+
+form.regForm fieldset div.inputCont {
+  margin: 0 0 13px 20px;
+  position: relative;
+}
+
+form.regForm fieldset div.inputCont p.error {
+  margin: 0;
+  color: #d00000;
+  position: absolute;
+  left: 0;
+  top: 18px;
+}
+
+form.regForm fieldset div.lead {
+  margin-top: 7px;
+}
+
+form.regForm fieldset div.inputCont {
+  width: 460px;
+  float: left;
+}
+
+form.regForm fieldset div.double div.inputCont {
+  width: 220px;
+}
+
+form.regForm label {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+form.regForm label span.req {
+  font-weight: normal;
+  color: #d00000;
+}
+
+form.regForm fieldset div.textfield {
+  width: 460px;
+  margin-top: 5px;
+  background-image: url(../../img/store/background_form_textfield_full.gif);
+}
+
+form.regForm fieldset div.error div.textfield {
+  background-image: url(../../img/store/background_form_textfield_full_error.gif);
+}
+
+form.regForm fieldset div.error div.textfield input {
+  background-color: #fff2f2;
+}
+
+form.regForm fieldset div.double div.textfield {
+  width: 220px;
+  background-image: url(../../img/store/background_form_textfield_half.gif);
+}
+
+form.regForm fieldset div.errorDouble div.error div.textfield {
+  width: 220px;
+  background-image: url(../../img/store/background_form_textfield_half_error.gif);
+}
+
+form.regForm fieldset div.selectmenu {
+  width: 460px;
+  height: 39px;
+  margin-top: 5px;
+}
+
+form.regForm fieldset div.double div.selectmenu {
+  width: 220px;
+}
+
+form.regForm fieldset div.error div.textfield,
+form.regForm fieldset div.errorDouble div.textfield,
+form.regForm fieldset div.errorDouble div.selectmenu {
+}
+
+form.regForm fieldset div.textfield input {
+  width: 438px;
+  left: 12px;
+  /* background-color: pink;*/
+}
+
+form.regForm fieldset div.double div.textfield input {
+  width: 197px;
+}
+
+form.regForm fieldset .checkbox {
+  float: left;
+}
+
+form.regForm fieldset div.checkbox {
+  width: 24px;
+  height: 23px;
+  margin: 0 6px 0 20px;
+  /*background: url(../../img/store/background_form_checkbox.gif) no-repeat left top;*/
+  position: relative;
+}
+
+form.regForm fieldset div.checkbox input {
+  border-width: 0;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+}
+
+form.regForm fieldset label.checkbox {
+  width: 420px;
+  font-weight: normal;
+  position: relative;
+  top: -0.2em;
+}
+
+form.regForm input.btnRight {
+  margin-top: 18px;
+  float: right;
+}
+
+form.regForm fieldset select.fixed-select {
+  width: 457px;
+  font-size: 1em;
+  color: #6F7A82;
+  background-color: #fefefe;
+  border: 1px solid #B8BDC1;
+  padding: 7px 4px 8px 4px;
+}
+
+form.regForm fieldset div.double select.fixed-select {
+  width: 220px;
+  font-size: 1em;
+  color: #6F7A82;
+  background-color: #fefefe;
+  border: 1px solid #B8BDC1;
+  padding: 7px 4px 8px 4px;
+}
+
+div#whatIs {
+  width: 203px;
+  padding-top: 18px;
+  float: left;
+}
+
+div#whatIs p {
+  font-size: 0.7em;
+  line-height: 1.5em;
+}
+
+/*-----------------------------------------
+  PRICING PAGE
+-------------------------------------------*/
+
+div#pricingCols div.col {
+  width: 355px;
+  margin: 47px 30px 0 0;
+  float: left;
+}
+div#pricingCols div.colEnd {
+  margin: 47px 0 0;
+}
+div#pricingCols div.col h2, div#srCol div.slideDown div.middle div h2, ul.featuresList li {
+  font-size: 0.8em;
+}
+div#pricingCols div.col h2, div#srCol div.slideDown div.middle div h2 {
+  margin-top: 1.2em;
+}
+ul.featuresList {
+  margin: 0.2em 0 0 14px;
+  list-style: disc;
+}
+
+
+div.pricingTableTop,
+div.pricingTableBottom {
+  width: 355px;
+  height: 4px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+div.pricingTableTop {
+  margin-top: 20px;
+  background: url(../../img/store/background_table_pricing_top.gif) no-repeat left top;
+}
+
+div.pricingTableBottom {
+  background: url(../../img/store/background_table_pricing_bottom.gif) no-repeat left top;
+}
+
+table.pricingTable {
+  width: 100%;
+}
+
+table.pricingTable tbody tr th,
+table.pricingTable tbody tr td {
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #eee;
+}
+
+table.pricingTable tbody tr.first th,
+table.pricingTable tbody tr.first td {
+  padding-top: 6px;
+}
+
+table.pricingTable tbody tr.last th,
+table.pricingTable tbody tr.last td {
+  padding-bottom: 6px;
+  border-bottom-width: 0;
+}
+
+table.pricingTable tbody tr th {
+  width: 39px;
+  border-bottom-color: #fff;
+  background-color: #e0f2ff;
+}
+
+table.pricingTable tbody tr td {
+  font-size: 0.8em;
+  border-right: 1px solid #eee;
+}
+
+div#pricingCols div.col p {
+  margin-top: 1.2em;
+  line-height: 1.4em;
+}
+
+div#pricingCols div.col p.disclaimer {
+  margin-top: 0.8em;
+  font-size: 0.6em;
+}
+
+div#pricingCols div.col h3 {
+  margin-top: 1.7em;
+  font-size: 0.8em;
+  text-transform: none;
+}
+
+div#pricingCols div.col p.lead {
+  margin-top: 0.3em;
+}
+
+.pricingPersonalHead {
+  margin-top: 40px !important;
+}
+
+/*-----------------------------------------
+  UPGEADE PAGE
+-------------------------------------------*/
+
+div#upgradeCols {
+  margin-top: 37px;
+}
+
+div#upgradeCols div.col {
+  width: 226px;
+  margin: 0 30px 0 0;
+  float: left;
+}
+
+div#upgradeCols div.colEnd {
+  margin: 0;
+}
+
+div#upgradeCols div.col p.viewMore {
+  font-size: 1em;
+}
+
+div#upgradeCols div.col a.vidThumb {
+  width: 226px; height: 128px; display: block; background-repeat: no-repeat; background-position: left top;}
+div#upgradeCols div.col a.videoDomainF {
+  background-image: url(/img/store/button_video_domain_fowarding_off.gif);}
+div#upgradeCols div.col a.videoDomainF:hover {
+  background-image: url(/img/store/button_video_domain_fowarding_on.gif);}
+div#upgradeCols div.col a.videoEmailF {
+  background-image: url(/img/store/button_video_email_fowarding_off.gif);}
+div#upgradeCols div.col a.videoEmailF:hover {
+  background-image: url(/img/store/button_video_email_fowarding_on.gif);}
+div#upgradeCols div.col a.videoCustomUrls {
+  background-image: url(/img/store/button_video_custom_urls_off.gif);}
+div#upgradeCols div.col a.videoCustomUrls:hover {
+  background-image: url(/img/store/button_video_custom_urls_on.gif);}
+div#upgradeCols div.col a.vidThumb span {
+  display: none;}
+
+
+div#regRec div.logoDiv {
+  margin-top: 30px;
+  padding: 0 0 0 200px;
+  position: relative;
+}
+
+div#regRec div.minHeight {
+  height: 123px;
+}
+
+div#regRec div.logoDiv p {
+  margin-top: 0.8em;
+}
+
+div#regRec div.logoDiv img.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+body.home div#regRec div.middle {
+  padding: 30px 42px 30px;
+}
+div#welcome {
+  width: 355px;
+  margin: 0 26px 0 0;
+  float: left;
+  background-color: #e0f2ff;
+}
+div#videoWrapper {
+  width: 355px;
+  height: 199px;
+}
+div#videoWrapper a {
+  width: 355px;
+  height: 199px;
+  display: block;
+  background: url(/img/store/thumbnail_video_home.jpg) no-repeat left top;
+}
+div#videoWrapper a:hover {
+  background-image: url(/img/store/thumbnail_video_home_on.jpg);
+}
+div#videoWrapper a span {
+  display: none;
+}
+div#welcome p.margin {
+  margin: 1.4em 30px 0;
+}
+div#welcome p.lead {
+  margin-top: 0;
+}
+div#welcome img.margin {
+  margin: 0 30px;
+}
+div#welcome div.bottom {
+  height: 4px;
+  margin-top: 20px;
+  background: url(/img/store/background_welcome_bottom.gif) no-repeat left top;
+}
+
+div#welcome ul {
+  margin: 12px 30px;
+  border-top: 1px solid #fff;
+}
+div#welcome ul li {
+  border-bottom: 1px solid #fff;
+  font-size: 0.8em;
+}
+div#welcome ul li a {
+  padding: 0.7em 15px 0.7em 30px;
+  display: block;
+  background: url(/img/store/button_play_off.gif) no-repeat left 7px;
+}
+div#welcome ul li a:hover {
+  background-image: url(/img/store/button_play_hover.gif);
+}
+
+div#personalize {
+  width: 355px;
+  float: left;
+}
+div#personalize img.margBot {
+  margin-bottom: 10px;
+}
+div#personalize ul {
+  width: 355px;
+  height: 160;
+}
+div#personalize ul li {
+  width: 118px;
+  height: 160px;
+  float: left;
+}
+div#personalize ul li.first {
+  width: 119px;
+}
+
+div#screen {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1050;
+}
+div#lightbox {
+  width: 718px;
+  height: 465px;
+  margin: -232px 0 0 -359px;
+  background: url(/img/store/background_lightbox.png) no-repeat left center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1051;
+}
+div#lightbox a.closeBtn {
+  position: absolute;
+  right: 16px;
+  top: 17px;
+}
+div#videoArea {
+  width: 640px;
+  height: 385px;
+  position: absolute;
+  left: 39px;
+  top: 39px;
+}
+
+/*-----------------------------------------
+  ORDER - BILLING
+-------------------------------------------*/
+
+div#billingColLeft {
+  width: 500px;
+  margin: 18px 37px 0 0;
+  float: left;
+}
+
+form.billingForm,
+form.billingForm fieldset {
+  width: 500px;
+}
+
+form.billingForm div.fieldsetClear,
+form.billingForm fieldset div.doubleClear {
+  display: none;
+}
+
+form.billingForm fieldset {
+  margin-top: 18px;
+  background-color: #e0f2ff;
+}
+
+form.billingForm fieldset.lead {
+  margin-top: 0;
+}
+
+form.billingForm fieldset div.top,
+form.billingForm fieldset div.bottom {
+  height: 10px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+div#regRec form.billingForm fieldset div.top {
+  background-image: url(../../img/store/background_regBox_top.gif);
+}
+
+div#regRec form.billingForm fieldset div.bottom {
+  background-image: url(../../img/store/background_regBox_bottom.gif);
+}
+
+form.billingForm fieldset div.inputCont {
+  margin: 0 0 13px 20px;
+  position: relative;
+}
+
+form.billingForm fieldset div.inputCont p.error {
+  margin: 0;
+  color: #d00000;
+  position: absolute;
+  left: 0;
+  top: 18px;
+}
+
+form.billingForm fieldset div.lead {
+  margin-top: 7px;
+}
+
+form.billingForm fieldset div.double div.inputCont {
+  width: 460px;
+  float: left;
+}
+
+form.billingForm fieldset div.double div.inputCont {
+  width: 220px;
+}
+
+form.billingForm label {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+form.billingForm label span.req {
+  font-weight: normal;
+  color: #d00000;
+}
+
+form.billingForm fieldset div.textfield {
+  width: 460px;
+  margin-top: 5px;
+  background-image: url(../../img/store/background_form_textfield_full.gif);
+}
+
+form.billingForm fieldset div.error div.textfield {
+  background-image: url(../../img/store/background_form_textfield_full_error.gif);
+}
+
+form.billingForm fieldset div.error div.textfield input {
+  background-color: #fff2f2;
+}
+
+form.billingForm fieldset div.double div.textfield {
+  width: 220px;
+  background-image: url(../../img/store/background_form_textfield_half.gif);
+}
+
+form.billingForm fieldset div.errorDouble div.error div.textfield {
+  width: 220px;
+  background-image: url(../../img/store/background_form_textfield_half_error.gif);
+}
+
+form.billingForm fieldset div.selectmenu {
+  width: 460px;
+  height: 39px;
+  margin-top: 5px;
+}
+
+form.billingForm fieldset div.double div.selectmenu {
+  width: 220px;
+}
+
+form.billingForm fieldset div.error div.textfield,
+form.billingForm fieldset div.errorDouble div.textfield,
+form.billingForm fieldset div.errorDouble div.selectmenu {
+  /*margin-top: 1.4em;*/
+}
+
+form.billingForm fieldset div.textfield input {
+  width: 438px;
+  left: 12px;
+  /* background-color: pink;*/
+}
+
+form.billingForm fieldset div.double div.textfield input {
+  width: 197px;
+}
+
+form.billingForm fieldset .checkbox {
+  float: left;
+}
+
+form.billingForm fieldset div.checkbox {
+  width: 24px;
+  height: 23px;
+  margin: 0 16px 0 20px;
+  background: url(../../img/store/background_form_checkbox.gif) no-repeat left top;
+  position: relative;
+}
+
+form.billingForm fieldset div.checkbox input {
+  border-width: 0;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+}
+
+form.billingForm fieldset label.checkbox {
+  width: 420px;
+  font-weight: normal;
+  position: relative;
+  top: -0.2em;
+}
+
+form.billingForm input.btnRight {
+  margin-top: 18px;
+  float: right;
+}
+
+form.billingForm .cc {
+  font-size: 0.8em;
+}
+
+form.billingForm .expired {
+  color: #B11B0E;
+}
+
+form.billingForm .existingCC {
+  margin: 0 20px 20px 20px;
+}
+
+form.billingForm .newCC {
+  margin: 0 20px 20px 20px;
+}
+
+form.billingForm fieldset select.fixed-select {
+  width: 457px;
+  font-size: 1em;
+  color: #6F7A82;
+  background-color: #fefefe;
+  border: 1px solid #B8BDC1;
+  padding: 7px 4px 8px 4px;
+  overflow: hidden;
+}
+
+form.billingForm fieldset div.double select.fixed-select {
+  width: 220px;
+  font-size: 1em;
+  color: #6F7A82;
+  background-color: #fefefe;
+  border: 1px solid #B8BDC1;
+  padding: 7px 4px 8px 4px;
+  overflow: hidden;
+}
+
+div#billingSidebar {
+  width: 203px;
+  padding-top: 14px;
+  float: left;
+}
+
+div#billingSidebar p {
+  font-size: 0.7em;
+  line-height: 1.5em;
+}
+
+/*-----------------------------------------
+  ORDER - TLD INFO
+-------------------------------------------*/
+
+div#tldInfoColLeft {
+  width: 500px;
+  margin: 18px 37px 0 0;
+  float: left;
+}
+
+form.tldInfoForm, form.tldInfoForm fieldset {
+  width: 500px;
+}
+
+form.tldInfoForm div.fieldsetClear,
+form.tldInfoForm fieldset div.doubleClear {
+  display: none;
+}
+
+form.tldInfoForm fieldset {
+  margin-top: 18px;
+  background-color: #e0f2ff;
+}
+
+form.tldInfoForm fieldset.lead {
+  margin-top: 0;
+}
+
+form.tldInfoForm fieldset div.top,
+form.tldInfoForm fieldset div.bottom {
+  height: 10px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+div#regRec form.tldInfoForm fieldset div.top {
+  background-image: url(../../img/store/background_regBox_top.gif);
+}
+
+div#regRec form.tldInfoForm fieldset div.bottom {
+  background-image: url(../../img/store/background_regBox_bottom.gif);
+}
+
+form.tldInfoForm fieldset div.inputCont {
+  margin: 0 0 13px 20px;
+  position: relative;
+}
+
+form.tldInfoForm fieldset div.inputCont p.error {
+  margin: 0;
+  color: #d00000;
+  position: absolute;
+  left: 0;
+  top: 18px;
+}
+
+form.tldInfoForm fieldset div.lead {
+  margin-top: 7px;
+}
+
+form.tldInfoForm fieldset div.inputCont {
+  width: 460px;
+  float: left;
+}
+
+form.tldInfoForm fieldset div.double div.inputCont {
+  width: 220px;
+}
+
+form.tldInfoForm label {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+form.tldInfoForm label span.req {
+  font-weight: normal;
+  color: #d00000;
+}
+
+form.tldInfoForm fieldset div.textfield {
+  width: 460px;
+  margin-top: 5px;
+  background-image: url(../../img/store/background_form_textfield_full.gif);
+}
+
+form.tldInfoForm fieldset div.error div.textfield {
+  background-image: url(../../img/store/background_form_textfield_full_error.gif);
+}
+
+form.tldInfoForm fieldset div.error div.textfield input {
+  background-color: #fff2f2;
+}
+
+form.tldInfoForm fieldset div.double div.textfield {
+  width: 220px;
+  background-image: url(../../img/store/background_form_textfield_half.gif);
+}
+
+form.tldInfoForm fieldset div.errorDouble div.error div.textfield {
+  width: 220px;
+  background-image: url(../../img/store/background_form_textfield_half_error.gif);
+}
+
+form.tldInfoForm fieldset div.selectmenu {
+  width: 460px;
+  height: 39px;
+  margin-top: 5px;
+}
+
+form.tldInfoForm fieldset div.double div.selectmenu {
+  width: 220px;
+}
+
+form.tldInfoForm fieldset div.error div.textfield,
+form.tldInfoForm fieldset div.errorDouble div.textfield,
+form.tldInfoForm fieldset div.textfield input {
+  width: 438px;
+  left: 12px;
+}
+
+form.tldInfoForm fieldset div.double div.textfield input {
+  width: 197px;
+}
+
+form.tldInfoForm fieldset .checkbox {
+  float: left;
+}
+
+form.tldInfoForm fieldset div.checkbox {
+  width: 24px;
+  height: 23px;
+  margin: 0 16px 0 20px;
+  background: url(../../img/store/background_form_checkbox.gif) no-repeat left top;
+  position: relative;
+}
+
+form.tldInfoForm fieldset div.checkbox input {
+  border-width: 0;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+}
+
+form.tldInfoForm fieldset label.checkbox {
+  width: 420px;
+  font-weight: normal;
+  position: relative;
+  top: -0.2em;
+}
+
+form.tldInfoForm input.btnRight {
+  margin-top: 18px;
+  float: right;
+}
+
+form.tldInfoForm .domain-label {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 6px 20px 18px 20px;
+}
+
+form.tldInfoForm .input-error {
+  line-height: 1.6em;
+  font-size: 12px !important;
+  font-weight: bold;
+  margin: 0 20px 18px 20px;
+  padding: 8px;
+  color: #fff;
+  background-color: #D02010;
+}
+
+form.tldInfoForm fieldset select.fixed-select {
+  width: 460px;
+  font-size: 1em;
+  color: #6F7A82;
+  background-color: #fefefe;
+  border: 1px solid #B8BDC1;
+  padding: 7px 4px 8px 4px;
+}
+
+form.tldInfoForm fieldset div.double select.fixed-select {
+  width: 220px;
+  font-size: 1em;
+  color: #6F7A82;
+  background-color: #fefefe;
+  border: 1px solid #B8BDC1;
+  padding: 7px 4px 8px 4px;
+}
+
+/*-----------------------------------------
+  TRANSFER
+-------------------------------------------*/
+
+form.transferForm fieldset div.inputCont {
+  margin: 0 0 10px 4px;
+  position: relative;
+}
+
+form.transferForm fieldset div.inputCont p.error {
+  margin: 0;
+  color: #d00000;
+  position: absolute;
+  left: 0;
+  top: 18px;
+}
+
+form.transferForm fieldset div.lead {
+  margin-top: 7px;
+}
+
+form.transferForm fieldset div.inputCont {
+  width: 460px;
+  float: left;
+}
+
+form.transferForm fieldset div.double div.inputCont {
+  width: 220px;
+}
+
+form.transferForm label {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+form.transferForm label span.req {
+  font-weight: normal;
+  color: #d00000;
+}
+
+form.transferForm fieldset div.textfield {
+  width: 460px;
+  margin-top: 5px;
+  background-image: url(../../img/store/background_form_textfield_full.gif);
+}
+
+form.transferForm fieldset div.error div.textfield {
+  background-image: url(../../img/store/background_form_textfield_full_error.gif);
+}
+
+form.transferForm fieldset div.error div.textfield input {
+  background-color: #fff2f2;
+}
+
+form.transferForm fieldset div.double div.textfield {
+  width: 220px;
+  background-image: url(../../img/store/background_form_textfield_half.gif);
+}
+
+form.transferForm fieldset div.errorDouble div.error div.textfield {
+  width: 220px;
+  background-image: url(../../img/store/background_form_textfield_half_error.gif);
+}
+
+form.transferForm fieldset div.selectmenu {
+  width: 460px;
+  height: 39px;
+  margin-top: 5px;
+}
+
+form.transferForm fieldset div.double div.selectmenu {
+  width: 220px;
+}
+
+form.transferForm fieldset div.error div.textfield,
+form.transferForm fieldset div.errorDouble div.textfield,
+form.transferForm fieldset div.textfield input {
+  width: 438px;
+  left: 12px;
+}
+
+form.transferForm fieldset div.double div.textfield input {
+  width: 197px;
+}
+
+form.transferForm fieldset .checkbox {
+  float: left;
+}
+
+form.transferForm fieldset div.checkbox {
+  width: 24px;
+  height: 23px;
+  margin: 0 16px 0 20px;
+  background: url(../../img/store/background_form_checkbox.gif) no-repeat left top;
+  position: relative;
+}
+
+form.transferForm fieldset div.checkbox input {
+  border-width: 0;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+}
+
+form.transferForm fieldset label.checkbox {
+  width: 420px;
+  font-weight: normal;
+  position: relative;
+  top: -0.2em;
+}
+
+form.transferForm input.btnRight {
+  margin-top: 18px;
+  float: right;
+}
+
+form.transferForm .domain-label {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 6px 20px 18px 20px;
+}
+
+form.transferForm .input-error {
+  line-height: 1.6em;
+  font-size: 12px !important;
+  font-weight: bold;
+  margin: 0 20px 18px 20px;
+  padding: 8px;
+  color: #fff;
+  background-color: #D02010;
+}
+
+form.transferForm fieldset select.fixed-select {
+  width: 460px;
+  font-size: 1em;
+  color: #6F7A82;
+  background-color: #fefefe;
+  border: 1px solid #B8BDC1;
+  padding: 7px 4px 8px 4px;
+}
+
+form.transferForm fieldset div.double select.fixed-select {
+  width: 220px;
+  font-size: 1em;
+  color: #6F7A82;
+  background-color: #fefefe;
+  border: 1px solid #B8BDC1;
+  padding: 7px 4px 8px 4px;
+}
+
+#check-transfer-status {
+  margin: 20px 0 20px 0 !important;
+  display: none;
+  background: url(../../img/icons/spinner.gif) no-repeat center left;
+  font-size: 13px;
+  font-weight: normal !important;
+  text-align: left !important;
+  padding: 0 0 0 21px;
+  color: #A1000F;
+}
+
+#check-transfer-msg {
+  display: none;
+  font-size: 13px;
+  text-align: left;
+  margin: 30px 0 30px 0;
+}
+
+#check-transfer-msg h2 {
+  margin-bottom: 11px;
+}
+
+.button {
+  height: 36px;
+  border: 3px double #B8BDC1;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #EDF4F9;
+  color: #6F7A82;
+}
+
+.buttonRight {
+  margin-top: 18px;
+  float: right;
+}
+
+/*-----------------------------------------
+  COMMON TOOLTIP
+-------------------------------------------*/
+
+.tooltip1 {
+  background-color: #6F7A82;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  width: 200px;
+  display: none;
+  color: #fff;
+  text-align: left;
+  font-size: 11px;
+  z-index: 10000;
+  -moz-box-shadow: 0 0 10px #000; /* outline radius for mozilla/firefox only */
+  -webkit-box-shadow: 0 0 10px #000;
+}
+
+/*-----------------------------------------
+  FOOTER
+-------------------------------------------*/
+
+div#footer {
+  margin-top: 77px;
+  padding-bottom: 44px;
+  background: #677885 url(../../img/store/background_footer.gif) repeat-x top;
+}
+
+body.home div#footer,
+body.pricing div#footer,
+body.upgrade div#footer,
+body.aboutus div#footer,
+body.services div#footer,
+body.about div#footer {
+  margin-top: 77px;
+}
+
+div#footerWrap {
+  width: 824px;
+  margin: 0 auto;
+  position: relative;
+}
+
+div#footerWrap div.col {
+  width: 180px;
+  margin: 0 30px 0 0;
+  padding-top: 35px;
+}
+
+div#footerWrap div.colFour {
+  width: 180px;
+  margin: 0;
+}
+
+div#footerWrap div.col h2 {
+  color: #fff;
+  font-weight: normal;
+}
+
+div#footerWrap div.col ul {
+  margin-top: 0.6em;
+}
+
+div#footerWrap div.col ul li,
+div#footerWrap div.col p {
+  font-size: 0.75em;
+  line-height:1.9em;
+}
+
+div#footerWrap div.col ul li a,
+div#footerWrap div.col p a {
+  color: #e0f2ff;
+}
+
+div#footerWrap div.col ul li a:hover,
+div#footerWrap div.col p a:hover {
+  text-decoration: underline;
+}
+
+div#footerWrap div.col p {
+  margin-top: 1.1em;
+  color: #fff;
+  line-height: 1.6em;
+}
+
+div#footerWrap p.legals {
+  margin-top: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.6em;
+}
+
+div#footerWrap img.footerLogo {
+  position: relative;
+  left: 10px;
+  top: 15px;
+}
+
+/*-----------------------------------------
+  CLEAR
+-------------------------------------------*/
+
+.clearfloat {
+  display: inline-block;
+}
+
+.clearfloat:after {
+  Content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html .clearfloat {
+  height: 1%;
+}
+
+.clearfloat {
+  display: block;
+}
+
+div.clear {
+  height: 1px;
+  clear: both;
+  overflow: hidden;
+  display: block;
+}
+
+/*-----------------------------------------
+  DOMAIN SUFFIX SELECT
+-------------------------------------------*/
+
+div#suffix-wrap {
+  height: 1px;
+  position: relative;
+}
+
+div#suffix-wrap div.selClone {
+  width: 103px; /* Important value. */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 350;
+}
+
+div#suffix-wrap div.selClone a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #6f7a82;
+}
+
+div#suffix-wrap div.selClone a.selOpt {
+  width: 58px;
+  height: 27px;
+  padding: 12px 30px 0 10px;
+  font-size: 0.8em;
+  display: block;
+  background: url(../../img/store/background_form_selectMenu_top.gif) no-repeat right top;
+}
+
+div#suffix-wrap div.selClone a.soOpen {
+  background-image: url(../../img/store/background_form_selectMenu_top_toggle.gif);
+}
+
+div#suffix-wrap div.selClone ul {
+  width: 97px;
+  height: 277px;
+  overflow-y: scroll;
+  border-right: 1px solid #b8bdc1;
+  background: url(../../img/store/background_form_selectMenu_dropdown.gif) no-repeat left top;
+  padding: 0;
+}
+
+div#suffix-wrap div.selClone ul li a {
+  margin: 0 0 0 3px;
+  padding: 8px 7px;
+  font-size: 0.8em;
+  display: block;
+}
+
+div#suffix-wrap div.selClone ul li a:hover {
+  background-color: #f4faee;
+}
+
+/*-----------------------------------------
+  INLINE STYLES
+-------------------------------------------*/
+
+.red {
+  color: #B51109;
+}
+
+.red-bold {
+  font-weight: bold;
+  color: #B51109;
+}
+
+.small {
+  font-size: 11px;
+  font-weight: normal;
+}
+
+th.align-right,
+td.align-right {
+  text-align: right !important;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+
+
+
+.fieldWithErrors {
+  border: 2px solid #c00;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

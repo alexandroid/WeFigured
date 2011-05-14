@@ -1,0 +1,69 @@
+
+#main-section{
+	background-color:white;
+	border: 1px double #8c8c8c;
+	background-image: -moz-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#bfbfbf), color-stop(3%, #f7f7f7), color-stop(12%, #f2f2f2), color-stop(90%, #d9d9d9));
+	box-shadow: 0 1px 5px rgba(87,130,171,0.75);
+	}
+
+#main-section #content{margin:16px 16px -10px 16px;padding:10px 26px 16px 26px;min-height:500px;}
+#main-section #content p{font-size:1.2em;}
+#main-section #content ul{margin-top:-20px;padding-left:30px;}
+#content h3.title{background-color:#B70004;color:white;margin-left:-31px;margin-right:-31px;margin-bottom:20px;padding-top:1px;padding-bottom:3px;padding-left:30px;text-transform:uppercase;line-height:1.6;font-weight:500;font-size:1.3em;}
+#contact-table a,a:hover,a:visited{text-decoration:none;color:#B70004;}
+#contact-table td{background-color:inherit !important;}
+img.in-line-img{float:left;border:#333 3px solid;}
+#feature-placeholder{border:thin #B70004 solid;padding:5px;}
+#perfect-ending{margin:0px 16px 0px 16px;padding:16px 16px 26px 16px;background-color:#EEE;}
+#customer-quote{border:solid 1px #E1E1d0;background-color:#F2EEE6;padding-bottom:20px;margin-top:24px;height:180px;}
+#customer-quote h3{color:#B70004;background-color:inherit;font-size:1.2em;margin:10px 0px 0px 10px !important;font-weight:500;}
+#quote_wrap{height:140px !important;}
+blockquote.b-customer-quote{font-family:Georgia,Times,serif;width:700px;/* required */
+height:130px;color:#333;}
+blockquote.b-customer-quote img{border-radius:2px 2px;border:2px solid #B70004;}
+blockquote.b-customer-quote .customer-image{float:left;width:60px;margin-top:6px;margin-left:20px;margin-right:30px;}
+blockquote.b-customer-quote .quote-text{float:left;width:590px;}
+blockquote.b-customer-quote p{margin-bottom:-10px !important;font-style:normal;height:130px;}
+blockquote.b-customer-quote cite{font-style:normal;text-align:left;font-size:11px;padding-left:20px;font-weight:bold;font-family:Georgia,Times,serif;}
+blockquote.b-customer-quote cite a,blockquote.b-customer-quote cite a:hover,blockquote.b-customer-quote cite a:visited{color:#333;text-decoration:none;}
+
+footer{padding:0px 0px 5px 0px;font-size:90%;}
+footer .copy{padding-left:20px;}
+#content h3 a,h3 a:hover,h3 a:active{text-decoration:none;color:white;}
+#contact-us h3{color:#B70004;text-transform:uppercase;line-height:1.6;font-weight:500;font-size:1.3em;}
+#contact-us h3 a,h3 a:hover,h3 a:active{color:#B70004;text-transform:uppercase;}
+
+body{background: #EDEDED url(/img/bg-stripe.png) repeat-x;}
+
+#header-content{
+	margin: 20px 0px 10px 30px;
+}
+
+nav{margin-top:24px; height:30px;}
+nav #nav-container #navlist{padding-bottom:0px;margin-left:150px;}
+nav #nav-container #navlist li{display:inline !important;list-style-type:none;}
+nav #nav-container #navlist li a,nav #navlist li a:visited{color:#464c54;padding:8px 14px 8px 14px;text-decoration:none;font-size:1.2em;font-weight:bold;text-transform:uppercase;cursor:pointer;}
+nav #nav-container #navlist li a.active{padding:8px 14px 8px 14px;text-decoration:none;}
+
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../fonts/ChunkFive/Chunkfive-webfont.eot');
+    src: url('../fonts/ChunkFive/Chunkfive-webfont.eot?iefix') format('eot'),
+         url('../fonts/ChunkFive/Chunkfive-webfont.woff') format('woff'),
+         url('../fonts/ChunkFive/Chunkfive-webfont.ttf') format('truetype'),
+         url('../fonts/ChunkFive/Chunkfive-webfont.svg#webfont90E2uSjN') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.company-title{
+	text-decoration:none;
+    font-family:"ChunkFiveRegular", "Georgia", sans-serif;
+    font-size:50px;
+    line-height:1;
+    letter-spacing:-.05em;
+    font-weight:lighter;
+    text-shadow:1px 1px #7f1414;
+}

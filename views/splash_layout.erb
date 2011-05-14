@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="css/application.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]>
+	  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+	<![endif]-->
+	<title>WeFigured - Team Goals Unlocked</title>
+	<script src="js/modernizr.min.js"></script>
+</head>
+<body>
+    <%= yield %>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script src="js/jquery.bbq.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(document).ready(function() {
+		$(function () {
+		  var tabContainers = $('#content > div');
+		  tabContainers.hide().filter('home').show();
+
+		  $(window).bind('hashchange', function () {
+		    var hash = window.location.hash || '#home';
+			if (hash.toString() == '#/') {hash = '#home'};
+		    tabContainers.hide();
+		    tabContainers.filter(hash.replace(/\//,'')).show();
+			if (hash.toString() == '#home') {hash = '#/'};
+		    $('#navlist a').removeClass('active');
+		    $('a[href=' + hash + ']').addClass('active');
+		  });
+
+		  $(window).trigger('hashchange');
+		});
+	});
+</script>
+</html>

@@ -1,0 +1,670 @@
+/* COMMON STYLE
+--------------------------------------------------------- */
+body {
+	background: #ffffff;
+	color: #0000000;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.6;
+	color: #666666; 
+}
+
+body.fs3 { font-size: 12px; }
+
+/* Normal link */
+a { color: #cc3300; text-decoration: none; }
+a:hover, a:active, a:focus { background: #cc3300; color: #ffffff; text-decoration: none; }
+
+
+/* HEADER
+--------------------------------------------------------- */
+#header { 
+	height: 110px;
+	z-index: 99;
+	position: relative;
+}
+
+#header .main { height: 100px; position: relative; }
+
+/* Image type */
+h1.logo a, h1.logo a:hover, h1.logo a:active, h1.logo a:focus {
+	display: block;
+	height: 110px;
+	width: 388px;
+	text-indent: -300%;
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+
+/* Contact-Number */
+#contact-number {
+	position: absolute;
+	right: 0;
+	top: 25px;
+	width: 234px;
+	height: 32px;
+}
+
+
+/* NAVIGATION
+--------------------------------------------------------- */
+
+#ja-cssmenu {
+	margin: 0; /* all lists */
+	padding: 0;
+}
+
+#ja-cssmenu ul {
+	margin: 0; /* all lists */
+	padding: 0;
+}
+
+#ja-cssmenu li {
+	background: none;
+	float: left;
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+#ja-cssmenu ul a {
+	width: 14.8em;
+	width: 12.8em;
+}
+
+
+/* 1st level */
+#ja-cssmenu li a {
+	display: block;
+	text-decoration: none;
+	padding: 0 15px;
+	line-height: 40px;
+	text-transform: uppercase;
+	margin-right: 4px; 
+}
+
+#ja-cssmenu li:hover a{
+	color: #cc3300;
+}
+
+#ja-cssmenu li a.active,
+#ja-cssmenu li a.active:hover,
+#ja-cssmenu li a.active:active,
+#ja-cssmenu li a.active:focus {
+	color: #FFFFFF;
+}
+
+
+/* Clearfix
+-------------------------------------------------------------*/
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+* html > body .clearfix {
+	display: block;
+	width: 100%;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+/* Main Content
+--------------------------------------------------------- */
+div.moduletable h3{
+	margin: 0 0 0px;
+	padding: 8px 0;
+	font-size: 125%;
+	border-top: 8px solid #333333;
+	text-transform: uppercase;
+	color:rgb(183,0,4);
+	
+}
+
+div.moduletable,
+div.moduletable_text,
+div.moduletable_menu { margin: 0px 0 20px; padding: 20px;}
+
+div.moduletable_blank { margin: 0 0 30px; }
+
+
+/* Only For right Side   ---------------------------------------------- Anil Singh 10 Sept 2010 */
+
+div.moduletable1 h3,
+div.moduletable_text1 h3,
+div.moduletable_menu1 h3{
+	margin: 0 0 0px;
+	padding: 8px 0;
+	font-size: 125%;
+	border-top: 8px solid #333333;
+	text-transform: uppercase;
+	color:rgb(183,0,4);
+	
+}
+
+div.moduletable1,
+div.moduletable_text1,
+div.moduletable_menu1 { margin: 0px 0 20px; padding: 0px;}
+
+/*  ------------------------------------------------------------------------------  */
+
+
+/* mis */
+div.moduletable ul,
+div.moduletable_text ul{ margin: 10px 0 0; }
+
+div.moduletable li,
+div.moduletable_text li,
+div.moduletable_menu li { margin: 0; padding-left: 20px; background-position: 10px 7px; }
+
+div.moduletable li a,
+div.moduletable_text li a,
+div.moduletable_menu li a { }
+
+ul.ja-bullettin li a { display: inline; padding: 0; }
+
+
+
+
+/* Picture Border Styling.
+-------------------------------------------------------------*/
+.clear, .divider {clear: both !important;}
+
+.no-display		{display: none !important;}
+.nowrap,.nobr	{white-space: nowrap !important;}
+.no-border 		{bottom: 0 !important;}
+.no-padding		{padding: 0 !important}
+.no-margin		{margin: 0 !important;}
+
+.normal-weight {font-weight: normal !important;}
+
+.auto-width {width: auto;}
+
+.first { background: none !important; border: 0 !important; }
+
+/*Alignment---*/
+.v-top 		{vertical-align: top;}
+.v-middle	{vertical-align: middle;}
+.v-bottom 	{vertical-align: bottom;}
+
+.alignleft		{text-align: left;}
+.aligncenter	{text-align: center;}
+.alignright		{text-align: right;}
+
+.left		{float: left;}
+.right	{float: right;}
+
+
+
+
+/* META
+--------------------------------------------------------- */
+.article-toolswrap {
+	display: block;
+	overflow: hidden;
+ 	color: #999999;
+}
+
+.createdate { 
+	padding-left: 20px;
+	background: url(../images/icon_calendar.gif) no-repeat left center;
+	margin-right: 5px;
+}
+
+.createdby {
+	padding-left: 18px;
+	background: url(../images/icon_author.gif) no-repeat left center;
+	margin-right: 5px;
+}
+
+.modifydate {
+	color: #999999;
+	display: block;
+	margin: 10px 0;
+	width: 100%;
+}
+
+.article-section {
+	background: #f2f2f2;
+	padding: 0 5px;
+	margin-right: 5px;
+}
+
+.article-toolswrap .article-meta { float: left; }
+.article-toolswrap .buttonheading { float: right; }
+
+.buttonheading { }
+
+.buttonheading img { border: 0; float: right; margin: 0 5px 0 0; }
+
+/* MAIN LAYOUT
+--------------------------------------------------------- */
+.wrap { clear: both; width: 100%; margin:0px 100px 0, 100px }
+.main { margin: 0 auto; width: 960px;}
+.main2 { margin: 0 auto; width: 960px; background: rgb(234,83,23); }
+#image-holder {background: white; min-height: 150px; min-width: 200px;}
+
+#ja-content { float: left; width: 75%;}
+#ja-current-content { border-top: 8px solid #333333; padding-top: 8px; }
+
+/*column*/
+#ja-col { float: right; width: 25%; }
+* html #ja-col { width: 24.5%; /*IE 6*/ }
+#ja-col .ja-innerpad { padding-left: 30px; }
+
+/*common style for column*/
+#ja-col table { border-collapse: collapse; border-spacing: 0; }
+#ja-col .article_separator { display: none; }
+
+/* COLLAPSIBLE LAYOUT
+--------------------------------------------------------- */
+#ja-container,
+#ja-container-f { clear: both; min-height: 400px; padding: 0px 0; }
+
+/* full */
+#ja-container-f #ja-content { width: 75%%; }
+
+
+/* SPOTLIGHT
+--------------------------------------------------------- */
+.ja-box-full, .ja-box-left, .ja-box-center, .ja-box-right .ja-box-gireesh{
+	float: left;
+	overflow: hidden;
+}
+
+.ja-box-full { float: none; }
+
+.ja-box-right { float: right; }
+
+
+.ja-box-left div.moduletable		{ padding: 0 10px 0 0; }
+.ja-box-center div.moduletable	{ padding: 0 10px; }
+.ja-box-right div.moduletable		{ padding: 0 0 0 10px; }
+/* ja-box-gireesh added by gireesh for a special module*/
+.ja-box-gireesh div.moduletable		{ padding: 0 10px 0 0; }
+
+
+/* FOOTER
+--------------------------------------------------------- */
+#ja-footer {
+	background: #666666;
+	border-top: 1px solid #999999; 
+	text-align: center;
+}
+
+#ja-footer .main { padding:10px 0; text-align: center; }
+
+#ja-footer small { color: #cccccc; font-size: 100%; margin-top: 0; }
+
+#ja-footer ul { display: inline; line-height: normal; margin: 0 10px 0 0; }
+
+#ja-footer li {
+	background: url(../images/vline.gif) no-repeat right;
+	display: inline;
+	margin: 0;
+	padding: 0 5px;
+}
+
+#ja-footer a {
+	background: none;
+	color: #ffffff;
+	display: inline;
+	line-height: normal;
+	padding: 0 5px;
+}
+
+#ja-footer a:hover,
+#ja-footer a:active,
+#ja-footer a:focus {
+	background: #333333;
+	color: #ffffff;
+}
+
+.ja-footurl { clear: both; float: none; }
+
+/* MISCELLANOUS
+----------------------------------------------------------- */
+.clr { clear: both; }
+
+/* Tooltips */
+.tool-tip {
+	background: #ffffff;
+	border: 1px solid #dddddd;
+	float: left;
+	max-width: 600px;
+	padding: 5px;
+}
+
+.tool-title {
+	background: url(../../system/images/selector-arrow.png) no-repeat;
+	font-size: 100%;
+	font-weight: bold;
+	margin: 0;
+	margin-top: -15px;
+	padding: 0;
+	padding-bottom: 5px;
+	padding-top: 15px;
+}
+
+.tool-text { font-size: 100%; margin: 0; }
+
+#system-message { margin: 10px; }
+
+#system-message a { color: #333333; }
+
+#system-message dd { text-indent: 0; }
+
+#system-message dt.notice,
+#system-message dt.error,
+#system-message dt.done,
+#system-message dt.message { display: none; }
+
+#system-message dd.message ul,
+#system-message dd.error ul,
+#system-message dd.notice ul,
+#system-message dd.done ul { border: none; margin: 0; padding: 0; }
+
+#system-message dd.message ul li,
+#system-message dd.error ul li,
+#system-message dd.notice ul li { background: none; margin: 0; padding: 5px 5px 5px 30px; }
+
+/* System Standard Messages */
+#system-message dd.message ul{
+	background: url(../images/icon-info.gif) #fafafa no-repeat 10px;
+	color: #666666;
+}
+
+#system-message dd.done ul{ background: #fafafa; color: #666666; }
+
+/* System Error Messages */
+#system-message dd.error ul{
+	background: url(../images/icon-error.gif) #fafafa no-repeat 10px !important;
+	color: #cc3300 !important;
+}
+
+/* System fade Messages */
+#system-message dd.fade ul{
+	background: url(../images/icon-info.gif) #fafafa no-repeat 10px;
+	color: #666666;
+}
+
+/* System Notice Messages */
+#system-message dd.notice ul{
+	background: url(../images/icon-info.gif) #fafafa no-repeat 10px;
+	color: #666666;
+}
+
+
+/* Add 04/09/2010 for new technologies   */
+
+#tech-area{background:#fff url(../images/bg-tech.gif);
+   background-repeat:repeat-x;
+   border:1px solid #f6ecd6;
+   padding:0 0 12px 11px;
+   margin-bottom:8px;
+   }
+   
+#tech-area .heading{font-family:arial;
+   font-size:17px;
+   font-weight:bold;
+   color:#a36206;
+   width:73%;
+   float:left;
+   padding:8px 0 6px 0;}  
+   
+#tech-area .icon{width:18%;
+   float:right;
+   text-align:right;
+   padding-right:5px;
+   height:33px;}
+   
+#tech-area .clear{clear:both;}
+
+#tech-area .txt{
+	background-image: url(../images/bullelt.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 6px;
+	padding-left: 16px;
+}
+
+ /*------------------------------------------------------------------------
+# JA Raite for Joomla 1.5.x - Version 1.0 - Licence Owner jSharing
+# ------------------------------------------------------------------------
+# Copyright (C) 2004-2008 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+# @license - Copyrighted Commercial Software
+# Author: J.O.O.M Solutions Co., Ltd
+# Websites:  http://jsharing.com -  http://jsharing.net
+# This file may not be redistributed in whole or significant part.
+-------------------------------------------------------------------------*/
+
+a { color: #AE7500; }
+a:hover, a:active, a:focus { background: #D8A936; }
+
+a.readon { color: rgb(234,83,23); background: url(../../images/yellow/arrow-readon.gif) no-repeat 5px center; }
+a.readon:hover, a.readon:focus, a.readon:active { background-color: #D8A936; }
+
+.inputbox:hover, .inputbox:focus { border: 2px solid #D8A936; }
+
+.button {
+	background: #D8A936;
+	border: 1px solid #D8A936;
+}
+
+ul.pagination a:hover, ul.pagination a:active, ul.pagination a:focus { background: rgb(234,83,23); }
+
+#ja-subnav ul li.active a, #ja-subnav ul li a:hover, #ja-subnav ul li a:active,#ja-subnav ul li a:focus { color: rgb(234,83,23); }
+
+#ja-pathway a:hover, #ja-pathway a:active, #ja-pathway a:focus { background: rgb(234,83,23); }
+
+ul.menu li a:hover, ul.menu li a:active, ul.menu li a:focus { }
+ul.menu li.active a { background: rgb(234,83,23); }
+
+h1.logo a, h1.logo a:hover, h1.logo a:active, h1.logo a:focus { background: url(../images/mindprintlogo.png) top left no-repeat; }
+
+
+
+#ja-footer { background: rgb(234,83,23); border-top: 1px solid #E3C16B; }
+#ja-footer small { color: #F8EFD7; }
+
+#ja-footer a:hover, #ja-footer a:active, #ja-footer a:focus { background: #A58129; }
+#ja-footer li { background: url(../../images/yellow/vline.gif) no-repeat right; }
+
+.nfcontent{ color: #F8EFD7;}
+.nfcontent a {
+	color: #F8EFD7;
+	border-bottom: 1px dotted #F8EFD7;
+}
+
+/* Typography ---*/
+pre, .code {
+	background: #FDFAF4;
+	border-left: 5px solid rgb(234,83,23);
+}
+
+.highlight {
+	background: #FDF9F2;
+	color: rgb(234,83,23);
+}
+
+p.stickynote {
+	background-color: #FDFAF4;
+	border: 1px solid #F1DFB1;
+}
+
+p.download {
+	background-color: #FDFAF4;
+	border: 1px solid #F1DFB1;
+}
+
+blockquote span.open {
+	background: url(../../images/yellow/so-q.gif) no-repeat left top;
+}
+
+blockquote span.close {
+	background: url(../../images/yellow/sc-q.gif) no-repeat bottom right;
+}
+
+.dropcap {
+	color: rgb(234,83,23);
+}
+
+ul.checklist li {
+	background: url(../../images/yellow/icon-checklist.gif) no-repeat 0 4px !important;
+}
+
+ul.arrow li {
+	background: url(../../images/yellow/icon-arrow.gif) no-repeat 3px 5px;
+}
+
+ul.star li {
+	background: url(../../images/yellow/icon-star.gif) no-repeat 3px 3px;
+}
+
+.bignumber {
+	background: url(../../images/yellow/ol-bg.gif) no-repeat top left;
+}
+
+div.bubble1 div {
+	background: url(../../images/yellow/bub1-br.gif) no-repeat bottom right;
+}
+
+div.bubble1 div div {
+	background: url(../../images/yellow/bub1-bl.gif) no-repeat bottom left;
+}
+
+div.bubble1 div div div {
+	background: url(../../images/yellow/bub1-tr.gif) no-repeat top right;
+}
+
+div.bubble1 div div div div {
+	background: url(../../images/yellow/bub1-tl.gif) no-repeat top left;
+}
+
+div.bubble2 div {
+	background: url(../../images/yellow/bub2-br.gif) no-repeat bottom right;
+}
+
+div.bubble2 div div {
+	background: url(../../images/yellow/bub2-bl.gif) no-repeat bottom left;
+}
+
+div.bubble2 div div div {
+	background: url(../../images/yellow/bub2-tr.gif) no-repeat top right;
+}
+
+div.bubble2 div div div div {
+	background: url(../../images/yellow/bub2-tl.gif) no-repeat top left;
+}
+
+div.bubble3 div {
+	background: url(../../images/yellow/bub3-br.gif) no-repeat bottom right;
+}
+
+div.bubble3 div div {
+	background: url(../../images/yellow/bub3-bl.gif) no-repeat bottom left;
+}
+
+div.bubble3 div div div {
+	background: url(../../images/yellow/bub3-tr.gif) no-repeat top right;
+}
+
+div.bubble3 div div div div {
+	background: url(../../images/yellow/bub3-tl.gif) no-repeat top left;
+}
+
+div.bubble4 div {
+	background: url(../../images/yellow/bub4-br.gif) no-repeat bottom right;
+}
+
+div.bubble4 div div {
+	background: url(../../images/yellow/bub4-bl.gif) no-repeat bottom left;
+}
+
+div.bubble4 div div div {
+	background: url(../../images/yellow/bub4-tr.gif) no-repeat top right;
+}
+
+div.bubble4 div div div div {
+	background: url(../../images/yellow/bub4-tl.gif) no-repeat top left;
+}
+
+.legend-title {
+	background: #FFFFFF;
+	color: rgb(234,83,23);
+}
+
+.legend {
+	border: 1px solid #F1DFB1;
+}
+
+/* Navigation ---*/
+#ja-splitmenu a {
+	background: url(../../images/yellow/nav-bg.gif) no-repeat top right #FDF9F2;
+}
+
+#ja-splitmenu a:hover,
+#ja-splitmenu a:active,
+#ja-splitmenu a:focus {
+	color: rgb(234,83,23);
+	background: url(../../images/yellow/nav-hover.gif) no-repeat top right #F8EFD7;
+}
+
+#ja-splitmenu li.active a {
+	background: url(../../images/yellow/nav-active.gif) no-repeat top right rgb(234,83,23);
+}
+
+#ja-splitmenu li.active a:hover,
+#ja-splitmenu li.active a:active,
+#ja-splitmenu li.active a:focus {
+	background: url(../../images/yellow/nav-active.gif) no-repeat top right rgb(234,83,23);
+}
+
+#ja-cssmenu li a {
+	background: url(../../images/yellow/nav-bg.gif) no-repeat top right #FDF9F2;
+}
+
+#ja-cssmenu li:hover a,
+#ja-cssmenu li.sfhover a,
+#ja-cssmenu li.havechildsfhover a,
+#ja-cssmenu li.havechild-activesfhover a {
+	color: #D8A936;
+	background: url(../../images/yellow/nav-hover.gif) no-repeat top right #F8EFD7;
+}
+
+#ja-cssmenu li a.active,
+#ja-cssmenu li a.active:hover,
+#ja-cssmenu li a.active:active,
+#ja-cssmenu li a.active:focus {
+	background: url(../../images/yellow/nav-active.gif) no-repeat top right rgb(234,83,23);
+}
+
+#ja-cssmenu li ul {
+	border: 3px solid #F8EFD7;
+	background: url(../../images/yellow/grad-1.gif) repeat-x bottom #F8EFD7;
+}
+
+#ja-cssmenu li ul li { border-bottom: 1px solid #F1DFB1; }
+
+#ja-cssmenu li li a.sfhover,
+#ja-cssmenu li ul a:hover,
+#ja-cssmenu li ul a:active,
+#ja-cssmenu li ul a:focus,
+#ja-cssmenu ul li:hover,
+#ja-cssmenu ul li.sfhover,
+#ja-cssmenu ul li.havesubchildsfhover,
+#ja-cssmenu ul li.havesubchild-activesfhover,
+#ja-cssmenu ul ul li:hover,
+#ja-cssmenu ul ul li.sfhover,
+#ja-cssmenu ul ul li.havesubchildsfhover,
+#ja-cssmenu ul ul li.havesubchild-activesfhover {
+	background: rgb(234,83,23);
+}
+
+#ja-cssmenu ul li a.active { color: #D8A936 !important; }
+
+#ja-cssmenu li li:hover > a { background: rgb(234,83,23); }

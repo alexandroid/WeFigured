@@ -1,7 +1,7 @@
 class WeFigured < Sinatra::Base
 
   get '/?' do
-    erb :'index'
+    erb :'splash', {:layout => :splash_layout}
   end
 
   # This URL is hit from the mobile app, an auth code for the user is present in the query string
