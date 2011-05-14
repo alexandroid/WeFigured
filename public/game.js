@@ -6,55 +6,25 @@ var cg = {
 	p: function(w,h) {
 		return new google.maps.Point(w,h);
 	},
-	playerImage: function(id, team, useDefault) {
-		return new google.maps.MarkerImage("/player/"+id+"/"+team+"/map_icon.png", new google.maps.Size(38, 31), new google.maps.Point(0,0), new google.maps.Point(10, 30));
+	playerImage: function(id) {
+		return new google.maps.MarkerImage("/player/"+id+"/map_icon.png", new google.maps.Size(38, 31), new google.maps.Point(0,0), new google.maps.Point(11, 40));
 	}
 }
 
-var coinSpriteURL = "/img/gameboard-sprite.png";
-var coinHeight = 25;
 var coins = {
-	10: {
-		red: new google.maps.MarkerImage(coinSpriteURL, cg.s(17,17),  cg.p(0, 277), cg.p(17/2, 17/2)),
-		blue: new google.maps.MarkerImage(coinSpriteURL, cg.s(17,17), cg.p(0, 302), cg.p(17/2, 17/2)),
-		grey: new google.maps.MarkerImage(coinSpriteURL, cg.s(17,17), cg.p(0, 327), cg.p(17/2, 17/2))
-	},
-	20: {
-		red: new google.maps.MarkerImage(coinSpriteURL, cg.s(19,19),  cg.p(17, 276), cg.p(19/2, 19/2)),
-		blue: new google.maps.MarkerImage(coinSpriteURL, cg.s(19,19), cg.p(17, 300), cg.p(19/2, 19/2)),
-		grey: new google.maps.MarkerImage(coinSpriteURL, cg.s(19,19), cg.p(17, 326), cg.p(19/2, 19/2))
-	},
-	30: {
-		red: new google.maps.MarkerImage(coinSpriteURL, cg.s(21,21),  cg.p(36, 275), cg.p(21/2, 21/2)),
-		blue: new google.maps.MarkerImage(coinSpriteURL, cg.s(21,21), cg.p(36, 299), cg.p(21/2, 21/2)),
-		grey: new google.maps.MarkerImage(coinSpriteURL, cg.s(21,21), cg.p(36, 325), cg.p(21/2, 21/2))
-	},
-	50: {
-		red: new google.maps.MarkerImage(coinSpriteURL, cg.s(25,25),  cg.p(57, 273), cg.p(25/2, 25/2)),
-		blue: new google.maps.MarkerImage(coinSpriteURL, cg.s(25,25), cg.p(57, 297), cg.p(25/2, 25/2)),
-		grey: new google.maps.MarkerImage(coinSpriteURL, cg.s(25,25), cg.p(57, 323), cg.p(25/2, 25/2))
-	}
+	red: new google.maps.MarkerImage("/img/cirred.png", cg.s(16,16),  cg.p(0, 0), cg.p(8, 8)),
+	blue: new google.maps.MarkerImage("/img/cirblue.png", cg.s(16,16), cg.p(0, 0), cg.p(8, 8)),
 };
 
 
-var playerIconSize = new google.maps.Size(32, 32);
-var playerIconOrigin = new google.maps.Point(0,0);
-var playerIconAnchor = new google.maps.Point(16, 32);
-var playerIcons = {
-	blue: new google.maps.MarkerImage("http://www.google.com/intl/en_us/mapfiles/ms/icons/blue-dot.png", playerIconSize, playerIconOrigin, playerIconAnchor),
-	red: new google.maps.MarkerImage("http://www.google.com/intl/en_us/mapfiles/ms/icons/red-dot.png", playerIconSize, playerIconOrigin, playerIconAnchor)
-}
-
-// player icon: '/player/' + player.geoloqi_id + "/" + player.team + '/map_icon.png'
-
-  $(function(){
+$(function(){
   	var people = [];
   	var pellets = [];
   	var lastRequestTime = 0;
 	
   	var myOptions = {
   		zoom: 15,
-  		center: new google.maps.LatLng(47.61486, -122.34320),
+  		center: new google.maps.LatLng(47.62286, -122.34320),
   		mapTypeId: google.maps.MapTypeId.ROADMAP,
   		mapTypeControl: true
   	};
@@ -65,6 +35,7 @@ var playerIcons = {
 	}
 
   	map = new google.maps.Map(document.getElementById("map"), myOptions);
+   drawLines(map);
 
     // Load the initial game state and place the pins on the map. Sample data in pellets.json
 
@@ -78,18 +49,25 @@ var playerIcons = {
   			success: function(data) {
   				// Add the new pellets
   				$(data.places).each(function(i, pellet) {
+  					var position = new google.maps.LatLng(pellet.latitude, pellet.longitude);
+  					
   					if(pellet.occupied == "0" || pellet.occupied == null) {
-  						markerIcon = coins[10].grey;
+  						markerIcon = coins.blue;
   					} else {
-  						markerIcon = coins[10].red;
+  						markerIcon = coins.red;
   					}
 
 					if(typeof pellets[pellet.place_id] == "undefined") {
+						// This pellet is not yet on the screen. Create it.
 	  					pellets[pellet.place_id] = {
 	  						id: pellet.place_id,
-	  						team: pellet.team,
+	  						user: new google.maps.Marker({
+	  							position: position,
+	  							map: map,
+	  							icon: cg.playerImage(pellet.user_id)
+	  						}),
 	  						marker: new google.maps.Marker({
-	  							position: new google.maps.LatLng(pellet.latitude, pellet.longitude),
+	  							position: position,
 	  							map: map,
 	  							icon: markerIcon
 	  						})
@@ -97,14 +75,25 @@ var playerIcons = {
 	  				} else {
 	  					// Pellet is already on the screen, decide whether we should update it
 	  					var p = pellets[pellet.place_id];
-	  					if(pellet.team != p.team) {
+	  					if(pellet.occupied != p.occupied) {
 	  						p.marker.setMap(null);
 	  						p.marker = new google.maps.Marker({
 	  							position: new google.maps.LatLng(pellet.latitude, pellet.longitude),
 	  							map: map,
 	  							icon: markerIcon
 	  						});
-	  						p.team = pellet.team;
+	  						// Remove the previous player marker
+	  						if(p.user) {
+	  							p.user.setMap(null);
+	  						}
+	  						p.user = null;
+	  						if(pellet.occupied == "1") {
+	  							p.user = new google.maps.Marker({
+	  								position: position,
+	  								map: map,
+	  								icon: cg.playerImage(pellet.user_id)
+	  							});
+	  						}
 	  					}
 	  				}
   				});
@@ -123,32 +112,54 @@ var playerIcons = {
         }
       });
     }
+});
 
-    function receivePlayerData(data) {
-  		var id = data.id;
-  		var username = data.username;
-  		var latitude = data.latitude;
-  		var longitude = data.longitude;
-  		var myLatLng = new google.maps.LatLng(latitude, longitude);
-  		var exists;
-  		for(i=0;i<people.length;i++){
-  			var person = people[i];
-  			if(person.id != id){
-			
-  			}else{
-  				exists = 1;
-  				person.marker.setPosition(myLatLng);
-  			}
-  		}
-  		if(!exists){
-  			var marker = new google.maps.Marker({
-  				position: myLatLng,
-  				map: map,
-  				title: username,
-  				icon: cg.playerImage(id, data.team, data.useDefaultIcon)
-  			});
-  			data.marker = marker;
-  			people.push(data);
-  		}
-    }
-  });
+function drawLines(map) {
+    var flightPlanCoordinates1 = [
+        //new google.maps.LatLng(47.614966, -122.343321), // our location?
+        new google.maps.LatLng(47.614979,-122.343330),
+        new google.maps.LatLng(47.616810,-122.340363),
+        new google.maps.LatLng(47.618286,-122.340019),
+        new google.maps.LatLng(47.619167,-122.341064),
+        new google.maps.LatLng(47.619747,-122.342377),
+        new google.maps.LatLng(47.619717,-122.343811),
+        new google.maps.LatLng(47.619411,-122.344566),
+        new google.maps.LatLng(47.618572,-122.345573),
+        new google.maps.LatLng(47.617332,-122.347137),
+        new google.maps.LatLng(47.619007,-122.349846),
+        new google.maps.LatLng(47.620110,-122.351257),
+        new google.maps.LatLng(47.622826,-122.347610),
+    ];
+    var flightPlanCoordinates2 = [
+        new google.maps.LatLng(47.622032,-122.341087),
+        new google.maps.LatLng(47.623348,-122.342850),
+        new google.maps.LatLng(47.624561,-122.343559),
+        new google.maps.LatLng(47.624561,-122.343559),
+        new google.maps.LatLng(47.626282,-122.343407),
+        new google.maps.LatLng(47.626514,-122.341064),
+        new google.maps.LatLng(47.625530,-122.338409),
+        new google.maps.LatLng(47.624866,-122.337143),
+        new google.maps.LatLng(47.623898,-122.335899),
+        new google.maps.LatLng(47.622566,-122.334930),
+        new google.maps.LatLng(47.621147,-122.335854),
+        new google.maps.LatLng(47.621147,-122.335854),
+        new google.maps.LatLng(47.620903,-122.338623),
+        new google.maps.LatLng(47.622074,-122.341110)
+    ];
+    var flightPath1 = new google.maps.Polyline({
+      path: flightPlanCoordinates1,
+      strokeColor: "#2380ff",
+      strokeOpacity: 0.8,
+      strokeWeight: 5
+    });
+    var flightPath2 = new google.maps.Polyline({
+      path: flightPlanCoordinates2,
+      strokeColor: "#2380ff",
+      strokeOpacity: 0.8,
+      strokeWeight: 5
+    });
+
+ 
+   flightPath1.setMap(map);
+   flightPath2.setMap(map);
+  }
