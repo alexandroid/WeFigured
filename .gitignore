@@ -1,0 +1,12 @@
+config.yml
+.DS_Store
+test.sqlite3
+public/icons/*.png
+doc/*
+gems/*
+cache/*
+bin/*
+specifications/*
+vendor/*
+log
+tmp

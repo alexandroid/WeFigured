@@ -1,4 +1,4 @@
-class PdxPacman < Sinatra::Base
+class WeFigured < Sinatra::Base
 
   get '/?' do
     erb :'index_stub'
@@ -95,29 +95,5 @@ class PdxPacman < Sinatra::Base
 	                :location => location}
     end
     {:places => places, :players => players}.to_json
-  end
-
-  get '/player/:player_id/:team/map_icon.png' do
-    filename = File.join PdxPacman.root, "public", "icons", params[:player_id] + '_' + params[:team] + '.png';
-    if File.exist?(filename)
-      send_file filename
-    else
-      @player = Player.first :geoloqi_user_id => params[:player_id]
-      if !@player.profile_image.nil? && @player.profile_image != ''
-        playerImg = Magick::Image.read(@player.profile_image).first
-        playerImg.crop_resized!(16, 16, Magick::NorthGravity)
-      else
-        playerImg = Magick::Image.read(File.join(PdxPacman.root, "public", "img", "mini-dino-" + params[:team] + ".png")).first
-      end
-      markerIcon = Magick::Image.read(File.join(PdxPacman.root, "public", "img", "player-icon-" + params[:team] + ".png")).first
-      result = markerIcon.composite(playerImg, 3, 3, Magick::OverCompositeOp)
-      result.write(filename)
-      send_file filename
-    end
-  end
-  
-  post '/contact_submit' do
-    RestClient.post 'http://business.geoloqi.com/contact-submit.php', params
-    {:result => "ok"}.to_json
   end
 end
