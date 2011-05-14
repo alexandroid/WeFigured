@@ -34,24 +34,35 @@ class WeFigured < Sinatra::Base
     redirect "/game/" + params[:layer_id]
   end
 
-  get '/game/:layer_id/?' do
-    begin
-      @game = Game.create_unless_exists params[:layer_id]
-    rescue Geoloqi::Error
-      redirect '/'
-    end
+  # This URL is hit from the mobile app, an auth code for the user is present in the query string
+  get '/game' do
     erb :'index'
   end
 
-  post '/trigger' do
+  # Geoloqi calls this URL when someone who's subscribed to the layer reaches one of the places
+  post '/trigger_enter' do
     body = SymbolTable.new JSON.parse(request.body)
 
     @player = Player.first :game => Game.first(:layer_id => body.layer.layer_id), :geoloqi_user_id => body.user.user_id
 
-    if body.place.extra.active.to_i == 1
-      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/#{body.place.place_id}", {:extra => {:active => 0, :team => @player.team.name}}
-      @player.add_points body.place.extra.points if body.place.extra && body.place.extra.points
-      @player.send_message "You ate a dot! #{body.place.extra.points} points"
+    if body.place.extra.occupied.to_i == 1
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/#{body.place.place_id}", {:extra => {:occupied => 1, :user => body.user.name}}
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "message/send", {:user_id => body.user.user_id, :text => "You made it! Now wait there a while or something..."}
+    end
+    
+    # TODO: Check if all the points are occupied, and if so, send a message to everyone saying they win!
+    
+    
+  end
+
+  # Geoloqi calls this URL when someone who's subscribed to the layer leaves one of the places
+  post '/trigger_exit' do
+    body = SymbolTable.new JSON.parse(request.body)
+
+    @player = Player.first :game => Game.first(:layer_id => body.layer.layer_id), :geoloqi_user_id => body.user.user_id
+
+    if body.place.extra.occupied.to_i == 1
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/#{body.place.place_id}", {:extra => {:occupied => 0, :user => ""}}
     end
   end
 
