@@ -10,6 +10,7 @@ gem 'symboltable',      '1.0.0'
 gem 'rack-fiber_pool',  '0.9.1', :require => 'rack/fiber_pool'
 gem 'rack-cache',       '1.0.1', :require => 'rack/cache'
 gem 'em-http-request',  '0.3.0'
+gem 'rmagick',          '2.13.1', :require => 'RMagick'
 gem 'thin'
 gem 'em-synchrony',     '0.2.0'
 gem 'rake',             '0.8.7',  :require => nil

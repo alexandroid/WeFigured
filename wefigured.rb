@@ -44,7 +44,7 @@ class WeFigured < Sinatra::Base
     body = SymbolTable.new JSON.parse(request.body)
 
     @player = Player.first :game => Game.first(:layer_id => body.layer.layer_id), :geoloqi_user_id => body.user.user_id
-
+    
     if body.place.extra.occupied.to_i == 1
       Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/#{body.place.place_id}", {:extra => {:occupied => 1, :user => body.user.name}}
       Geoloqi.post Geoloqi::OAUTH_TOKEN, "message/send", {:user_id => body.user.user_id, :text => "You made it! Now wait there a while or something..."}
@@ -82,4 +82,26 @@ class WeFigured < Sinatra::Base
 
     {:places => places}.to_json
   end
+
+  get '/player/:user_id/map_icon.png' do
+    filename = File.join WeFigured.root, "public", "icons", params[:user_id] + '.png';
+    if File.exist?(filename)
+      send_file filename
+    else
+      # Fetch the user profile from Geoloqi
+      response = Geoloqi.get Geoloqi::OAUTH_TOKEN, 'account/profile?user_id=' + params[:user_id]
+      
+      if !response.profile_image.nil? && response.profile_image != ''
+        playerImg = Magick::Image.read(response.profile_image).first
+        playerImg.crop_resized!(16, 16, Magick::NorthGravity)
+      else
+        playerImg = Magick::Image.read(File.join(WeFigured.root, "public", "img", "mini-dino-blue.png")).first
+      end
+      markerIcon = Magick::Image.read(File.join(WeFigured.root, "public", "img", "player-icon-blue.png")).first
+      result = markerIcon.composite(playerImg, 3, 3, Magick::OverCompositeOp)
+      result.write(filename)
+      send_file filename
+    end
+  end
+  
 end
