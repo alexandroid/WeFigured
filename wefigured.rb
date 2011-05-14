@@ -71,40 +71,15 @@ class WeFigured < Sinatra::Base
 
     response = Geoloqi.post Geoloqi::OAUTH_TOKEN, 'place/list', {:layer_id => params[:layer_id], :after => params[:after]}
 
-    @game = Game.first :layer_id => params[:layer_id]
-
     places = []
     response['places'].each do |place|
       places << {:place_id => place['place_id'],
                  :latitude => place['latitude'],
                  :longitude => place['longitude'],
-                 :points => place['extra']['points'],
-                 :team => place['extra']['team'],
-                 :active => place['extra']['active']}
+                 :user => place['extra']['user'],
+                 :occupied => place['extra']['occupied']}
     end
 
-    @tokens = []
-    @game.player.each do |player|
-      @tokens.push player.token
-    end
-    response = Geoloqi.get Geoloqi::OAUTH_TOKEN, 'share/last?geoloqi_token=,' + @tokens.join(",")
-
-    players = []
-    @game.player(:order => :points_cache.desc).each do |player|
-    	location = {}
-    	response.each do |p|
-    	  if p['username'] == player.name
-    	    location = p
-    	  end
-    	end
-
-    	players << {:geoloqi_id => player.geoloqi_user_id,
-                  :score => player.points_cache,
-	                :name => player.name,
-	                :team => player.team.name,
-	                :profile_image => player.profile_image,
-	                :location => location}
-    end
-    {:places => places, :players => players}.to_json
+    {:places => places}.to_json
   end
 end

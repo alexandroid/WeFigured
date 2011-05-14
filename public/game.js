@@ -53,7 +53,7 @@ var playerIcons = {
   	var lastRequestTime = 0;
 	
   	var myOptions = {
-  		zoom: 17,
+  		zoom: 15,
   		center: new google.maps.LatLng(47.61486, -122.34320),
   		mapTypeId: google.maps.MapTypeId.ROADMAP,
   		mapTypeControl: true
@@ -78,10 +78,10 @@ var playerIcons = {
   			success: function(data) {
   				// Add the new pellets
   				$(data.places).each(function(i, pellet) {
-  					if(typeof pellet.team == "undefined" || pellet.team == null || pellet.team == "") {
-  						markerIcon = coins[pellet.points].grey;
+  					if(pellet.occupied == "0" || pellet.occupied == null) {
+  						markerIcon = coins[10].grey;
   					} else {
-  						markerIcon = coins[pellet.points][pellet.team];
+  						markerIcon = coins[10].red;
   					}
 
 					if(typeof pellets[pellet.place_id] == "undefined") {
@@ -109,51 +109,6 @@ var playerIcons = {
 	  				}
   				});
   				
-  				// Move the player markers and update the scoreboard
-  				$("#scoreboard-red, #scoreboard-blue").html("");
-  				var total_score = {
-  					red: 0,
-  					blue: 0
-  				};
-  				
-  				$("#num-players").html(data.players.length + " Players");
-  				
-  				$(data.players).each(function(i, player){
-  					if($("#player-score-" + player.geoloqi_id).length == 0) {
-					    if(player.name.match('^_')) {
-					      player.name = '';
-					    }
-					    var useDefaultIcon = false;
-					    if(player.profile_image == '' || player.profile_image == null) {
-					      useDefaultIcon = true;
-					      if(player.team == "red") {
-						player.profile_image = "/img/blank-profile-red.png";
-					      } else {
-						player.profile_image = 'http://beta.geoloqi.com/themes/standard/assets/images/profile-blank.png';
-					      }
-					    }
-	  					$("#"+player.team+"-team-players").append('<li id="player-score-' + player.geoloqi_id + '"><img src="' + player.profile_image + '" />'
-	  						+ '<h3>' + player.name + '</h3>'
-	  						+ '<span class="points">' + player.score + '</span>'
-	  						+ '</li>');
-	  				} else {
-	  					$("#player-score-" + player.geoloqi_id + " .points").html(player.score);
-	  				}
-					total_score[player.team] += player.score;
-					if(typeof player.location.location != "undefined") {
-	  					receivePlayerData({
-	  						id: player.geoloqi_id,
-	  						username: player.name, 
-	  						team: player.team,
-	  						latitude: player.location.location.position.latitude, 
-	  						longitude: player.location.location.position.longitude,
-							useDefaultIcon: useDefaultIcon
-	  					});
-	  				}
-  				});
-  				$(".red-score-value").html(total_score.red);
-  				$(".blue-score-value").html(total_score.blue);
-
 				lastRequestTime = Math.round((new Date()).getTime() / 1000);
 			  	setTimeout(updateGame, 5000);
   		    }
