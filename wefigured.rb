@@ -9,6 +9,10 @@ class WeFigured < Sinatra::Base
     erb :'map'
   end
 
+  get '/test' do
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB5", {:extra => {:occupied => 1, :user_id => 'Gf'}}
+  end
+
   get '/game/:layer_id/join' do
     @oauth_token = Geoloqi.get_token(params[:code], Geoloqi::BASE_URI+'game/'+params[:layer_id]+'/join')['access_token']
     @game = Game.create_unless_exists params[:layer_id]
@@ -45,8 +49,8 @@ class WeFigured < Sinatra::Base
 
     @player = Player.first :game => Game.first(:layer_id => body.layer.layer_id), :geoloqi_user_id => body.user.user_id
     
-    if body.place.extra.occupied.to_i == 1
-      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/#{body.place.place_id}", {:extra => {:occupied => 1, :user => body.user.name}}
+    if body.place.extra.occupied.to_i == 0
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/#{body.place.place_id}", {:extra => {:occupied => 1, :user_id => body.user.user_id}}
       Geoloqi.post Geoloqi::OAUTH_TOKEN, "message/send", {:user_id => body.user.user_id, :text => "You made it! Now wait there a while or something..."}
     end
     
@@ -76,7 +80,7 @@ class WeFigured < Sinatra::Base
       places << {:place_id => place['place_id'],
                  :latitude => place['latitude'],
                  :longitude => place['longitude'],
-                 :user => place['extra']['user'],
+                 :user_id => place['extra']['user_id'],
                  :occupied => place['extra']['occupied']}
     end
 
@@ -89,10 +93,19 @@ class WeFigured < Sinatra::Base
       send_file filename
     else
       # Fetch the user profile from Geoloqi
-      response = Geoloqi.get Geoloqi::OAUTH_TOKEN, 'account/profile?user_id=' + params[:user_id]
       
-      if !response.profile_image.nil? && response.profile_image != ''
-        playerImg = Magick::Image.read(response.profile_image).first
+      case params[:user_id]
+      when "w0001"
+        profile_image = 'https://si0.twimg.com/profile_images/1199279268/profilepic_reasonably_small.jpg'
+      when "w0002"
+        profile_image = 'https://si0.twimg.com/profile_images/1199279268/profilepic_reasonably_small.jpg'
+      else
+        response = Geoloqi.get Geoloqi::OAUTH_TOKEN, 'account/profile?user_id=' + params[:user_id]
+        profile_image = response.profile_image
+      end
+      
+      if !profile_image.nil? && profile_image != ''
+        playerImg = Magick::Image.read(profile_image).first
         playerImg.crop_resized!(16, 16, Magick::NorthGravity)
       else
         playerImg = Magick::Image.read(File.join(WeFigured.root, "public", "img", "mini-dino-blue.png")).first
