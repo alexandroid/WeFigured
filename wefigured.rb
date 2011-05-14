@@ -9,6 +9,7 @@ class WeFigured < Sinatra::Base
     erb :'map'
   end
 
+  # Debugging route for assigning players to the places on the map
   get '/test' do
       Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB5", {:extra => {:occupied => 1, :user_id => 'w_michael_wasser'}}
       Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB7", {:extra => {:occupied => 1, :user_id => 'w_sidneyallen'}}
@@ -140,9 +141,9 @@ class WeFigured < Sinatra::Base
         playerImg = Magick::Image.read(profile_image).first
         playerImg.crop_resized!(16, 16, Magick::NorthGravity)
       else
-        playerImg = Magick::Image.read(File.join(WeFigured.root, "public", "img", "mini-dino-blue.png")).first
+        playerImg = Magick::Image.read(File.join(WeFigured.root, "public", "img", "mini-dino-red.png")).first
       end
-      markerIcon = Magick::Image.read(File.join(WeFigured.root, "public", "img", "player-icon-blue.png")).first
+      markerIcon = Magick::Image.read(File.join(WeFigured.root, "public", "img", "player-icon-red.png")).first
       result = markerIcon.composite(playerImg, 3, 3, Magick::OverCompositeOp)
       result.write(filename)
       send_file filename
