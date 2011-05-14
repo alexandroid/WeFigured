@@ -10,7 +10,19 @@ class WeFigured < Sinatra::Base
   end
 
   get '/test' do
-      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB5", {:extra => {:occupied => 1, :user_id => 'Gf'}}
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB5", {:extra => {:occupied => 1, :user_id => 'w_michael_wasser'}}
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB7", {:extra => {:occupied => 1, :user_id => 'w_sidneyallen'}}
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB6", {:extra => {:occupied => 1, :user_id => 'w_alex_donn'}}
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB8", {:extra => {:occupied => 1, :user_id => 'w_mattdyor'}}
+      
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB4", {:extra => {:occupied => 1, :user_id => 'w_attdeveloper'}}
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WAw", {:extra => {:occupied => 1, :user_id => 'w_haysom_runner'}}
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WAy", {:extra => {:occupied => 1, :user_id => 'w_nickdenny'}}
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB0", {:extra => {:occupied => 1, :user_id => 'w_blsaws'}}
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WAz", {:extra => {:occupied => 1, :user_id => 'w_kirillzubovsky'}}
+      Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WB3", {:extra => {:occupied => 1, :user_id => 'w_alexandr0id'}}
+      # uncomment to save the world
+      # Geoloqi.post Geoloqi::OAUTH_TOKEN, "place/update/WAs", {:extra => {:occupied => 1, :user_id => 'w_aaronpk'}}
   end
 
   get '/game/:layer_id/join' do
@@ -93,12 +105,32 @@ class WeFigured < Sinatra::Base
       send_file filename
     else
       # Fetch the user profile from Geoloqi
-      
+
       case params[:user_id]
-      when "w0001"
+      when "w_michael_wasser"
         profile_image = 'https://si0.twimg.com/profile_images/1199279268/profilepic_reasonably_small.jpg'
-      when "w0002"
-        profile_image = 'https://si0.twimg.com/profile_images/1199279268/profilepic_reasonably_small.jpg'
+      when "w_sidneyallen"
+        profile_image = 'http://a0.twimg.com/profile_images/1140421907/sid-avatar_reasonably_small.jpg'
+      when "w_alex_donn"
+        profile_image = 'http://a1.twimg.com/profile_images/1183315528/alex_reasonably_small.jpg'
+      when "w_mattdyor"
+        profile_image = 'http://a2.twimg.com/profile_images/1175387129/RallyWire-Icon_reasonably_small.png'
+      when "w_attdeveloper"
+        profile_image = 'http://a2.twimg.com/profile_images/1111456366/Globe_Logo_normal_reasonably_small.jpg'
+      when "w_haysom_runner"
+        profile_image = 'http://a1.twimg.com/profile_images/97593631/abc_reasonably_small.JPG'
+      when "w_nickdenny"
+        profile_image = 'http://a2.twimg.com/profile_images/210812576/me_black_n_white_reasonably_small.jpg'
+      when "w_blsaws"
+        profile_image = 'http://a0.twimg.com/profile_images/771195062/20091111_014712_reasonably_small.jpg'
+      when "w_kirillzubovsky"
+        profile_image = 'http://a1.twimg.com/profile_images/1347431366/newbwimage_reasonably_small.jpg'
+      when "w_alexandr0id"
+        profile_image = 'http://a3.twimg.com/sticky/default_profile_images/default_profile_2_reasonably_small.png'
+      when "w_vagababov"
+        profile_image = 'http://a2.twimg.com/profile_images/217557213/1619522_reasonably_small.jpg'
+      when "w_aaronpk"
+        profile_image = 'http://a1.twimg.com/profile_images/553711946/aaronpk-bw_reasonably_small.jpg'
       else
         response = Geoloqi.get Geoloqi::OAUTH_TOKEN, 'account/profile?user_id=' + params[:user_id]
         profile_image = response.profile_image
