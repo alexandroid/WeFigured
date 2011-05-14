@@ -1,7 +1,12 @@
 class WeFigured < Sinatra::Base
 
   get '/?' do
-    erb :'index_stub'
+    erb :'index'
+  end
+
+  # This URL is hit from the mobile app, an auth code for the user is present in the query string
+  get '/map' do
+    erb :'map'
   end
 
   get '/game/:layer_id/join' do
@@ -32,11 +37,6 @@ class WeFigured < Sinatra::Base
       @player.send_message("You're on the " + @player.team.name + " team!").to_json
     end
     redirect "/game/" + params[:layer_id]
-  end
-
-  # This URL is hit from the mobile app, an auth code for the user is present in the query string
-  get '/game' do
-    erb :'index'
   end
 
   # Geoloqi calls this URL when someone who's subscribed to the layer reaches one of the places
