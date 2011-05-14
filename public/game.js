@@ -65,6 +65,7 @@ var playerIcons = {
 	}
 
   	map = new google.maps.Map(document.getElementById("map"), myOptions);
+   drawLines(map);
 
     // Load the initial game state and place the pins on the map. Sample data in pellets.json
 
@@ -152,3 +153,62 @@ var playerIcons = {
   		}
     }
   });
+
+function drawLines(map) {
+    var myLatLng = new google.maps.LatLng(47.619442,-122.346539);
+    var myOptions = {
+      zoom: 14,
+      center: myLatLng,
+      mapTypeId: google.maps.MapTypeId.TERRAIN
+    };
+ 
+    //var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+ 
+    var flightPlanCoordinates1 = [
+        //new google.maps.LatLng(47.614966, -122.343321), // our location?
+        new google.maps.LatLng(47.614979,-122.343330),
+        new google.maps.LatLng(47.616810,-122.340363),
+        new google.maps.LatLng(47.618286,-122.340019),
+        new google.maps.LatLng(47.619167,-122.341064),
+        new google.maps.LatLng(47.619747,-122.342377),
+        new google.maps.LatLng(47.619717,-122.343811),
+        new google.maps.LatLng(47.619411,-122.344566),
+        new google.maps.LatLng(47.618572,-122.345573),
+        new google.maps.LatLng(47.617332,-122.347137),
+        new google.maps.LatLng(47.619007,-122.349846),
+        new google.maps.LatLng(47.620110,-122.351257),
+        new google.maps.LatLng(47.622826,-122.347610),
+    ];
+    var flightPlanCoordinates2 = [
+        new google.maps.LatLng(47.622032,-122.341087),
+        new google.maps.LatLng(47.623348,-122.342850),
+        new google.maps.LatLng(47.624561,-122.343559),
+        new google.maps.LatLng(47.624561,-122.343559),
+        new google.maps.LatLng(47.626282,-122.343407),
+        new google.maps.LatLng(47.626514,-122.341064),
+        new google.maps.LatLng(47.625530,-122.338409),
+        new google.maps.LatLng(47.624866,-122.337143),
+        new google.maps.LatLng(47.623898,-122.335899),
+        new google.maps.LatLng(47.622566,-122.334930),
+        new google.maps.LatLng(47.621147,-122.335854),
+        new google.maps.LatLng(47.621147,-122.335854),
+        new google.maps.LatLng(47.620903,-122.338623),
+        new google.maps.LatLng(47.622074,-122.341110)
+    ];
+    var flightPath1 = new google.maps.Polyline({
+      path: flightPlanCoordinates1,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 2
+    });
+    var flightPath2 = new google.maps.Polyline({
+      path: flightPlanCoordinates2,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 2
+    });
+
+ 
+   flightPath1.setMap(map);
+   flightPath2.setMap(map);
+  }
